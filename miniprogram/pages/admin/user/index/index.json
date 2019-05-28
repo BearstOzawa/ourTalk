@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-button":"../../../dist/Lin/button"
+  },
+  "navigationBarTitleText": "用户管理"
+}

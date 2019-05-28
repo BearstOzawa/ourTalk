@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-card": "../../dist/Lin/card",
+    "l-icon": "../../dist/Lin/icon",
+    "l-input": "../../dist/Lin/input",
+    "l-button": "../../dist/Lin/button",
+    "l-tag":"../../dist/Lin/tag"
+  }
+}

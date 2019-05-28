@@ -1,0 +1,13 @@
+<!--pages/comment/comment.wxml-->
+<view class='flexDownC'>
+  <view class='item w100 flexRowL' wx:for='{{data}}' wx:key="{{}}" >
+  <view class='flexC info w100'>
+    <image src='{{ userImg ||  defaultImg }}' class='userImg'></image>
+    <text class='username'>{{userName || '虎友'}}</text>
+  </view>
+    
+  <view class='txt w100' >
+    <text class='flexC'>{{item.text}}</text>
+  </view>
+  </view>
+</view>

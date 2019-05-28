@@ -1,0 +1,16 @@
+<view class='upUser'>
+  <form class="upUserBox" bindsubmit='upUser'>
+    <!-- ID框 -->
+    <view class='upUserInputBox'>
+      <l-input width="500" label-width="130" disabled="true" label="ID" data-value='{{id}}' name="id" value='{{user._id}}' placeholder="{{user._id}}" />
+    </view>
+    <!-- 用户框 -->
+    <view class='upUserInputBox'>
+      <l-input width="500" label-width="130" data-value='{{author}}' label="用户名" name="userName" value='{{user.userName}}' />
+    </view>
+    
+    <view class='upUserBtn'>
+      <button type="primary" form-type='submit'>修改</button>
+    </view>
+  </form>
+</view>

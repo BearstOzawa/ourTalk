@@ -1,0 +1,76 @@
+<scroll-view scroll-y class="scrollView" scroll-top='{{topNum}}' bindscroll="scrolltoupper">
+  <!-- scroll-top='{{topNum}}' bindscroll="scrolltoupper"  -->
+  <!-- Topic -->
+  <view class='Topic'>
+    <view>
+      <view>
+        <!-- <l-card type="avatar" l-class="card" image="{{topicUserImg}}" title="{{topicUserName}}" describe="{{topicTime}}"> -->
+        <l-card type="primary" plaintext="true">
+          <!-- 用户信息 -->
+          <view class='topicUserInfo'>
+            <image src="{{data.topicUserImg}}" class="topicUserImg" mode="aspectFit" />
+            <view class='topictUserNAT'>
+              <text class='topicUserName'>{{data.topicUser}}</text>
+              <text class='topicTime'>{{data.topicTime}}</text>
+            </view>
+          </view>
+          <!-- 主题内容 -->
+          <view class="topicItem">{{data.topicName}}</view>
+        </l-card>
+      </view>
+    </view>
+  </view>
+  <!-- 分割块 -->
+  <view class='topicBetweenCommentBox'>
+    <view style="margin-left:10rpx;height:60rpx;margin-top:10rpx;">
+      <l-tag size="mini">全部评论 ( {{data.topicCommentNum}} )</l-tag>
+    </view>
+  </view>
+  <!-- 滑动容器 -->
+
+  <!-- Comment -->
+  <!-- 判断是否 -->
+  <view wx:if='{{data.comment.length > 0}}'>
+    <!-- 列表渲染 -->
+    <view wx:for="{{data.comment}}" wx:key="{{index}}">
+      <view class="comment">
+        <view class="aComment">
+          <view class='commentUserInfo'>
+            <image src="{{item.commentUserImg}}" class="commentUserImg" mode="aspectFit" />
+            <view class='commentUserNAT'>
+              <text class='commentUserName'>{{item.commentUserName}}</text>
+              <text class='userCommentTime'>{{item.commentTime}}</text>
+            </view>
+          </view>
+          <!-- 评论最大64字 -->
+          <view style="overflow-wrap: break-word;margin-left: 80rpx;">
+            <text style='font-size: 28rpx;' selectable='true'>{{item.comment}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
+    </view>
+  </view>
+  <view wx:else class='noComment'>
+    暂无评论...
+  </view>
+</scroll-view>
+<!-- 回到顶部 -->
+<view>
+  <image src="../../../images/topic/dingbu.png" class="toTopBtn" hidden='{{!floorstatus}}' bindtap="goTop"></image>
+</view>
+
+
+<!-- addCommnet -->
+<view class='addCommentBg'>
+  <view class='addComment'>
+    <view class='addCommentBox'>
+      <!-- <input width="600" height="60" type="text" label-width="100" label="评论" placeholder="在此输入评论" maxlength="64" confirm-type='send' bindinput='addComment' bindconfirm='confirm' value='{{commentTxt}}'/> -->
+      <input class='addCommentInput' placeholder='友善发言的人运气不会太差' placeholder-style='color:#ccc' maxlength='64' value='{{commentTxt}}' confirm-type='send' bindinput='addComment' bindconfirm='confirm'></input>
+      <!--  -->
+      <!-- <l-button l-class="addCommentBtn" shape="semicircle" bind:lintap="addComment">发送</l-button> -->
+      <!-- <button bindtap="addComment">发送</button> -->
+    </view>
+  </view>
+</view>

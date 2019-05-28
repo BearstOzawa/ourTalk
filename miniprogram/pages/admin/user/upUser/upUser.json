@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-button":"../../../dist/Lin/button",
+    "l-input":"../../..//dist/Lin/input"
+  },
+  "navigationBarTitleText": "修改用户"
+}

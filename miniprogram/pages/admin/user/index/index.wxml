@@ -1,0 +1,33 @@
+<view>
+  <view wx:if="{{user}}" class='userAdmin'>
+    <view class="userAdminHead">
+      <view class="userAdminHeadth">ID</view>
+      <view class="userAdminHeadth">昵称</view>
+      <view class="userAdminHeadth">操作</view>
+    </view>
+    <block wx:for="{{user}}" wx:key="{{}}">
+      <view class="userAdminBodyOne" wx:if="{{index % 2 == 0}}">
+        <view class="UserAdminBodyID">{{item._id}}</view>
+        <view class="UserAdminBodyName">{{item.userName}}</view>
+        <view class="td">
+          <l-button type="error" width="90" height="50" data-id='{{item._id}}' bindtap='onDel'>删除</l-button>
+          <l-button type="success" width="90" height="50" data-id='{{item._id}}' bindtap='onUpdate'>修改</l-button>
+        </view>
+      </view>
+      <view class="userAdminBodyTwo" wx:else>
+        <view class="UserAdminBodyID">{{item._id}}</view>
+        <view class="UserAdminBodyName">{{item.userName}}</view>
+        <view class="td">
+          <l-button type="error" width="90" height="50" data-id='{{item._id}}' bindtap='onDel'>删除</l-button>
+          <l-button type="success" width="90" height="50" data-id='{{item._id}}' bindtap='onUpdate'>修改</l-button>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+  <view wx:else="{{user}}" class='none'>
+    <text>暂时没有用户！</text>
+  </view>
+
+</view>

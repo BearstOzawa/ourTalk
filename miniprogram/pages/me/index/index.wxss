@@ -1,0 +1,45 @@
+/* pages/me/index/index.wxss */
+.userInfoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300rpx;
+  width: 100%;
+}
+.userInfoImgAndName{
+  margin-top: 50rpx;
+}
+.userInfoBoxBtn{
+  margin-top: 100rpx;  
+}
+.userInfoGrid {
+  display: flex;
+  justify-content: center;
+  height: 200rpx;
+  width: 100%;
+}
+
+.gridItem {
+  width: 250rpx;
+}
+
+.gridItemNum {
+  font-size: 48rpx;
+  color: #f07;
+  font-style: italic;
+}
+
+.gridItemText {
+  font-size: 28rpx;
+  color: #2d8cf0;
+}
+
+.listBox {
+  display: flex;
+  justify-content: center;
+  width: 700rpx;
+  margin-left: 10rpx;
+}
+
+

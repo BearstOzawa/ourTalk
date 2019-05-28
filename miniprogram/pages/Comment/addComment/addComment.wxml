@@ -1,0 +1,4 @@
+<view class='addCommentBox'>
+  <l-input width="600" height="60" type="text" slot="center" label-width="130" label="评论" placeholder="在此输入评论" />
+  <l-button width="100" height="70" shape="semicircle">发送</l-button>
+</view>

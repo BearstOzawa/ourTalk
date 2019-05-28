@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-avatar": "../../dist/Lin/avatar",
+    "l-tag": "../../dist/Lin/tag"
+  },
+  "navigationBarTitleText": "我的主题"
+}

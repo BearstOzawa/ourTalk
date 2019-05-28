@@ -1,0 +1,47 @@
+/* pages/set/set.wxss */
+.upUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.upUserBox{
+  margin-top: 50rpx;
+
+}
+.upUserInputBox{
+  width: 750rpx;
+  display: inline-flex;
+  margin-top: 40rpx;
+  justify-content: center;
+}
+.upUserInputBox input{
+  border:1rpx solid #ddd;
+  border-radius: 14rpx;
+  padding: 10rpx;
+}
+.comfirm {
+    position: fixed;
+    width: 750rpx;
+    height: 100rpx;
+    bottom: 0;
+}
+.upUserIDBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.upUserID{
+  text-align: center;
+  font-size: 32rpx;
+  width: 50%;
+  word-break:break-all;
+  word-wrap: break-word;
+}
+.upUserBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx;
+}

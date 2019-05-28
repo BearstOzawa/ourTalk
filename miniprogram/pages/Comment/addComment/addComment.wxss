@@ -1,0 +1,5 @@
+.addCommentBox{
+  display: flex;
+  justify-content: center;
+  height: 60rpx;
+}

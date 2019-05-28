@@ -1,0 +1,20 @@
+<view>
+  <view class='userInfo'>
+    <l-avatar text="{{userName}}" placement="bottom" src="{{userImg}}" />
+    <l-tag shape="circle">{{data.length}}个主题</l-tag>
+  </view>
+  <view style='margin-top:50rpx;'>
+    <view wx:for='{{data}}' wx:key="{{index}}" class='topicPage'>
+      <view class='line' />
+      <view class='aTopicBox'>
+        <view class='topicName'>
+          <text>{{item.topicName}}</text>
+        </view>
+        <view class='topicCAT'>
+                  <text class='topicCommentNum'>{{item.topicCommentNum}}条回复</text>
+          <text class='topicTime'>{{item.topicTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

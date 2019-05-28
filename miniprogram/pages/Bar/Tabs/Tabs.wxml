@@ -1,0 +1,10 @@
+<view>
+  <l-tabs swipeable="true" placement="top">
+    <l-tabpanel tab="最新主题" key="one" slot="one">
+      <view class="tab-content">最新主题</view>
+    </l-tabpanel>
+    <l-tabpanel tab="最热主题" key="two" slot="two">
+      <view class="tab-content">最热主题</view>
+    </l-tabpanel>
+  </l-tabs>
+</view>

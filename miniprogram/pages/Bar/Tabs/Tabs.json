@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-tabs":"../../dist/Lin/tabs",
+    "l-tabpanel":"../../dist/Lin/tabpanel"
+    }
+}

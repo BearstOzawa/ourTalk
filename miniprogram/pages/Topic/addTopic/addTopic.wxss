@@ -1,0 +1,17 @@
+/* pages/Topic/addTopic/addTopic.wxss */
+.addTopic{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.textAreaBox{
+  height: 850rpx；
+}
+.textArea{
+  height: 850rpx;
+}
+.addTopicBtn{
+  margin-top: 30rpx;
+}
