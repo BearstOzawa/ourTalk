@@ -1,13 +1,12 @@
 <view class="comment">
-  <view class="aComment">
-    <view class='commentUserInfo'>
-      <image src="{{commentUserImg}}" class="commentUserImg" mode="aspectFit" />
-      <view class='commentUserNAT'>
-        <text class="commentUserNmae">{{commentUserName}}</text>
-        <text class='userCommentTime'>{{commentTime}}</text>
-      </view>
+    <view class="aComment">
+        <view class="commentUserInfo">
+            <image class="commentUserImg" mode="aspectFit" src="{{commentUserImg}}"></image>
+            <view class="commentUserNAT">
+                <text class="commentUserNmae">{{commentUserName}}</text>
+                <text class="userCommentTime">{{commentTime}}</text>
+            </view>
+        </view>
+        <view class="userCommentText">{{userComment}}</view>
     </view>
-    <!-- 评论最大64字 -->
-    <view class="userCommentText">{{userComment}}</view>  
-  </view>
 </view>

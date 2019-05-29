@@ -1,49 +1,49 @@
-/* OneCard */
-.card{
-  height: 340rpx;
+.card {
+    height: 340rpx;
 }
 
-/* 用户信息修饰 */
-.topicUserInfo{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 140rpx;
-}
-.topicUserInfoImg{
-  width: 60rpx;
-}
-.topicUserInfoNAT{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20rpx;
-}
-.topicUserInfoName{
-  font-size: 28rpx;
-}
-.topicUserInfoTime{
-  font-size: 25rpx;
-  color: #666666;
+.topicUserInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 140rpx;
 }
 
-
-/* 主题修饰 */
-.topicItem{
-  font-size: 34rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /*行数*/
-  -webkit-box-orient: vertical;
+.topicUserInfoImg {
+    width: 60rpx;
 }
 
-/* 评论图标 */
-.topicContainer{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10rpx;
+.topicUserInfoNAT {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
 }
-.topicContainerNum{
-  font-size: 32rpx;
+
+.topicUserInfoName {
+    font-size: 28rpx;
+}
+
+.topicUserInfoTime {
+    font-size: 25rpx;
+    color: #666666;
+}
+
+.topicItem {
+    font-size: 34rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.topicContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10rpx;
+}
+
+.topicContainerNum {
+    font-size: 32rpx;
 }

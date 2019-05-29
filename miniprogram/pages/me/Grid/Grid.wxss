@@ -1,20 +1,19 @@
-/* pages/me/Grid/Grid.wxss */
-.grid{
-display: flex;
-justify-content: center;
+.grid {
+    display: flex;
+    justify-content: center;
 }
 
-.gridItem{
-  width: 250rpx;
+.gridItem {
+    width: 250rpx;
 }
 
 .num {
-  font-size: 48rpx;
-  color: #FF0077;
-  font-style: italic;
+    font-size: 48rpx;
+    color: #FF0077;
+    font-style: italic;
 }
 
 .text {
-  font-size: 28rpx;
-  color: #666;
+    font-size: 28rpx;
+    color: #666;
 }

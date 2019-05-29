@@ -1,4 +1,4 @@
-var TYPE = {
+var TYPE = ({
     NULL: 'null',
     UNDEFINED: 'undefined',
     NUMBER: 'Number',
@@ -9,54 +9,53 @@ var TYPE = {
     ARRAY: 'Array',
     DATE: 'Date',
     REGEXP: 'RegExp',
-}
+});
 
 function isUndefined(val) {
-    return TYPE.UNDEFINED === typeof val;
-}
+    return (TYPE.UNDEFINED === typeof val)
+};
 
 function isNull(val) {
-    return val === TYPE.NULL;
-}
+    return (val === TYPE.NULL)
+};
 
 function _jadgeFun(val, type) {
-    if (isUndefined(val) || isNull(val)) return false;
-    return TYPE[type] === val.constructor;
-}
+    if (isUndefined(val) || isNull(val)) return (false);;
+    return (TYPE[((nt_0 = (type), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))] === val.constructor)
+};
 
 function isNumber(val) {
-    return _jadgeFun(val, 'NUMBER');
-}
+    return (_jadgeFun(val, 'NUMBER'))
+};
 
 function isString(val) {
-    return _jadgeFun(val, 'STRING');
-}
+    return (_jadgeFun(val, 'STRING'))
+};
 
 function isBoolean(val) {
-    return _jadgeFun(val, 'BOOLEAN');
-}
+    return (_jadgeFun(val, 'BOOLEAN'))
+};
 
 function isObject(val) {
-    return _jadgeFun(val, 'OBJECT');
-}
+    return (_jadgeFun(val, 'OBJECT'))
+};
 
 function isFunction(val) {
-    return _jadgeFun(val, 'FUNCTION');
-}
+    return (_jadgeFun(val, 'FUNCTION'))
+};
 
 function isArray(val) {
-    return _jadgeFun(val, 'ARRAY');
-}
+    return (_jadgeFun(val, 'ARRAY'))
+};
 
 function isDate(val) {
-    return _jadgeFun(val, 'DATE');
-}
+    return (_jadgeFun(val, 'DATE'))
+};
 
 function isRegExp(val) {
-    return _jadgeFun(val, 'REGEXP');
-}
-
-module.exports = {
+    return (_jadgeFun(val, 'REGEXP'))
+};
+module.exports = ({
     isNull: isNull,
     isUndefined: isUndefined,
     isNumber: isNumber,
@@ -66,5 +65,5 @@ module.exports = {
     isFunction: isFunction,
     isArray: isArray,
     isDate: isDate,
-    isRegExp: isRegExp
-}
+    isRegExp: isRegExp,
+});

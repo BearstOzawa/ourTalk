@@ -1,68 +1,75 @@
-Component({
-  options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
-  },
-  relations: {
-    '../step/index': {
-      type: 'child',
-      linked() {
-        this._initSteps();
-      },
-      unlinked() {
-        this._initSteps();
-      }
-    },
-  },
-
-  properties: {
-    direction: {
-      type: String,
-      value: 'row'
-    },
-    activeIndex: {
-      type: Number,
-      value: 1
-    },
-    activeColor: {
-      type: String,
-      value: '#3963bc'
-    },
-    color: {
-      type: String,
-      value: ''
-    },
-    type: {
-      type: String,
-      value: 'number'
+var _extends = Object.assign || function(target) {
+    for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+            }
+        }
     }
-  },
+    return target;
+};
 
-  /**
+Component({
+    options: {
+        multipleSlots: true
+    },
+    relations: {
+        "../step/index": {
+            type: "child",
+            linked: function linked() {
+                this._initSteps();
+            },
+            unlinked: function unlinked() {
+                this._initSteps();
+            }
+        }
+    },
+    properties: {
+        direction: {
+            type: String,
+            value: "row"
+        },
+        activeIndex: {
+            type: Number,
+            value: 1
+        },
+        activeColor: {
+            type: String,
+            value: "#3963bc"
+        },
+        color: {
+            type: String,
+            value: ""
+        },
+        type: {
+            type: String,
+            value: "number"
+        }
+    },
+    /**
    * 组件的初始数据
    */
-  data: {
-
-  },
-
-  /**
+    data: {},
+    /**
    * 组件的方法列表
    */
-  methods: {
-    _initSteps() {
-      let steps = this.getRelationNodes('../step/index')
-      let length = steps.length
-      if (this.data.direction == 'row') this.setData({
-        length
-      })
-      if (length > 0) {
-        steps.forEach((step, index) => {
-          step.updateDataChange({
-            length,
-            index,
-            ...this.data
-          });
-        });
-      }
+    methods: {
+        _initSteps: function _initSteps() {
+            var _this = this;
+            var steps = this.getRelationNodes("../step/index");
+            var length = steps.length;
+            if (this.data.direction == "row") this.setData({
+                length: length
+            });
+            if (length > 0) {
+                steps.forEach(function(step, index) {
+                    step.updateDataChange(_extends({
+                        length: length,
+                        index: index
+                    }, _this.data));
+                });
+            }
+        }
     }
-  }
-})
+});

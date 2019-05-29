@@ -1,41 +1,28 @@
-<!--pages/me/index/index.wxml-->
-<!-- 用户info -->
-<view class='userInfoBox'>
-  <!-- 用户头像 -->
-  <label>
-    <!-- 判断用户登录 -->
-    <view wx:if="{{userImg.length!=0}}">
-      <!-- <image mode="aspectFit" class="userInfoImg" src='{{userImg}}'></image> -->
-          <!-- {{userImg || defaultUrl}} -->
-      <l-avatar l-class="userInfoImgAndName" text="{{userName}}" placement="bottom" src="{{userImg}}" />
+<view class="thePage">
+    <view class="userInfoBox">
+        <label>
+            <view wx:if="{{isHide}}">
+                <button bindgetuserinfo="getUserInfoClick" class="userInfoBoxBtn" openType="getUserInfo" size="mini" type="primary">点击授权登录</button>
+            </view>
+            <view wx:if="{{!isHide}}">
+                <l-avatar lClass="userInfoImgAndName" placement="bottom" src="{{userImg}}" text="{{userName}}"></l-avatar>
+            </view>
+        </label>
     </view>
-    <view wx:else>
-      <button class="userInfoBoxBtn" size="mini" type="primary" open-type='getUserInfo' bindgetuserinfo='getUserInfoClick'>点击授权登录</button>
-      <!-- getUserInfoClick -->
+    <view class="userInfoGrid">
+        <view class="userInfoBg">
+            <view bindtap="toMyTopic" class="userInfoTCBox">
+                <image class="userInfoIco" mode="aspectFit" src="../../../images/me/topic.png"></image>
+                <text class="userInfoText">我的主题</text>
+            </view>
+            <view bindtap="toMyComment" class="userInfoTCBox">
+                <image class="userInfoIco" mode="aspectFit" src="../../../images/me/comment.png"></image>
+                <text class="userInfoText">我的评论</text>
+            </view>
+        </view>
     </view>
-    <!-- 用户名 -->
-    <!-- <view class='userInfoName'>
-      <text>{{userName}}</text>
-      class='{{ userName == "点击头像登录" ? "userNameTrue":"userName"}}' 
-    </view>-->
-  </label>
-</view>
-
-<!-- 用户主题评论info -->
-<view class='userInfoGrid'>
-  <l-grid>
-    <l-grid-item class='gridItem' key="one" slot="one" bind:lintap="toMyTopic">
-      <view class="gridItemNum">{{userTopicNum}}</view>
-      <view class="gridItemText">主题</view>
-    </l-grid-item>
-    <l-grid-item class='gridItem' key="two" slot="two" bind:lintap="toMyComment">
-      <view class="gridItemNum">{{userCommentNum}}</view>
-      <view class="gridItemText">评论</view>
-    </l-grid-item>
-  </l-grid>
-</view>
-<!-- 设置帮助 -->
-<view style="listBox">
-  <l-list gap="10" title="设置" icon="setting" bind:lintap="onSetClick" />
-  <l-list gap="10" title="关于" icon="help" bind:lintap="onHelpClick" />
+    <view style="listBox">
+        <l-list bind:lintap="onSetClick" gap="10" icon="setting" title="设置"></l-list>
+        <l-list bind:lintap="onHelpClick" gap="10" icon="help" title="关于"></l-list>
+    </view>
 </view>

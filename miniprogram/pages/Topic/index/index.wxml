@@ -1,107 +1,76 @@
-<!-- 整个页面容器 -->
-<view class='thePage'>
-  <!-- 下级容器 -->
-  <view class="onePage">
-    <!-- 顶部选项卡 -->
-    <l-tabs swipeable="true" placement="top" style="height:100%" active-color="#2d8cf0" bind:linchange="hotList">
-
-      <!-- 最新列表 -->
-      <l-tabpanel tab="最新" key="one" slot="one">
-        <view class='tapView'>
-          <scroll-view scroll-y class="scrollView" scroll-top='{{topNum}}' bindscroll="scrolltoupper">
-            <!-- scroll-top='{{topNum}}' bindscroll="scrolltoupper" -->
-            <block wx:for="{{topic}}" wx:key="{{index}}">
-              <!-- 单个卡片 -->
-              <view id="tapTest" class='onrCardView' bindtap='toTopic' data-id='{{item.topicId}}'>
-                <!-- 卡片框 -->
-                <l-card plaintext="true" type="primary" l-class="card">
-                  <view>
-                    <!-- 用户信息栏 -->
-                    <view class='topicUserInfo'>
-                      <view>
-                        <image src='{{item.topicUserImg}}' class='topicUserInfoImg' mode="aspectFit"></image>
-                      </view>
-                      <view class='topicUserInfoNAT'>
-                        <text class='topicUserInfoName'>{{item.topicUser}}</text>
-                        <text class='topicUserInfoTime'>{{item.topicTime}}</text>
-                      </view>
-                    </view>
-                    <!-- 主题内容 -->
-                    <view class="topicItem">{{item.topicName}}</view>
-                    <!-- 评论图标 -->
-                    <view>
-                      <view class="topicContainer">
-                        <l-icon style="margin-right:10rpx;" name="default" color="#666" size="30" />
-                        <view class="topicContainerNum">{{item.topicCommentNum}}</view>
-                      </view>
-                    </view>
-                  </view>
-                </l-card>
-              </view>
-            </block>
-          </scroll-view>
-        </view>
-      </l-tabpanel>
-
-
-
-      <!-- 最热列表 -->
-      <l-tabpanel tab="最热" key="two" slot="two">
-        <view class='tapView'>
-          <scroll-view scroll-y class="scrollView">
-            <block wx:for="{{topic}}" wx:key="{{index}}">
-              <!-- 单个卡片 -->
-              <view id="tapTest" class='onrCardView' bindtap='toTopic' data-id='{{item.topicId}}'>
-                <!-- 卡片框 -->
-                <l-card plaintext="true" type="primary" l-class="card">
-                  <view>
-                    <!-- 用户信息栏 -->
-                    <view class='topicUserInfo'>
-                      <view>
-                        <image src='{{item.topicUserImg}}' class='topicUserInfoImg' mode="aspectFit"></image>
-                      </view>
-                      <view class='topicUserInfoNAT'>
-                        <text class='topicUserInfoName'>{{item.topicUser}}</text>
-                        <text class='topicUserInfoTime'>{{item.topicTime}}</text>
-                      </view>
-                    </view>
-                    <!-- 主题内容 -->
-                    <view class="topicItem">{{item.topicName}}</view>
-                    <!-- 评论图标 -->
-                    <view>
-                      <view class="topicContainer">
-                        <l-icon style="margin-right:10rpx;" name="default" color="#666" size="30" />
-                        <view class="topicContainerNum">{{item.topicCommentNum}}</view>
-                      </view>
-                    </view>
-                  </view>
-                </l-card>
-              </view>
-            </block>
-
-          </scroll-view>
-        </view>
-      </l-tabpanel>
-
-
-
-
-
-
-
-
-
-    </l-tabs>
-  </view>
-  <!-- 悬浮发布按钮 -->
-  <view>
-    <view>
-      <image src="../../../images/topic/bianji.png" class="addTopicBtn" bindtap="addTopic"></image>
+<view class="thePage">
+    <view class="onePage">
+        <l-tabs activeColor="#2d8cf0" bind:linchange="tabChange" placement="top" style="height:100%" swipeable="true">
+            <l-tabpanel key="0" slot="0" tab="最新">
+                <view class="tapView">
+                    <scroll-view scrollY bindscroll="scrolltoupper" class="scrollView" scrollTop="{{topNum}}">
+                        <view bindtap="toOneTopic" class="onrCardView" data-id="{{item.topicId}}" id="tapTest" wx:for="{{topic}}" wx:key="{{index}}">
+                            <l-card lClass="card" plaintext="true" type="primary">
+                                <view>
+                                    <view class="topicUserInfo">
+                                        <view>
+                                            <image class="topicUserInfoImg" mode="aspectFit" src="{{item.topicUserImg}}"></image>
+                                        </view>
+                                        <view class="topicUserInfoNAT">
+                                            <text class="topicUserInfoName">{{item.topicUser}}</text>
+                                            <text class="topicUserInfoTime">{{item.topicTime}}</text>
+                                        </view>
+                                    </view>
+                                    <view class="topicItem">{{item.topicName}}</view>
+                                    <view>
+                                        <view class="topicContainer">
+                                            <l-icon color="#666" name="default" size="30" style="margin-right:10rpx;"></l-icon>
+                                            <view class="topicContainerNum">{{item.topicCommentNum}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </l-card>
+                        </view>
+                    </scroll-view>
+                </view>
+                <view>
+                    <image bindtap="upPageNew" class="upPage" src="../../../images/topic/shuaxin.png"></image>
+                </view>
+            </l-tabpanel>
+            <l-tabpanel key="1" slot="1" tab="最热">
+                <view class="tapView">
+                    <scroll-view scrollY bindscroll="scrolltoupper" class="scrollView" scrollTop="{{topNum}}">
+                        <view bindtap="toOneTopic" class="onrCardView" data-id="{{item.topicId}}" id="tapTest" wx:for="{{topic}}" wx:key="{{index}}">
+                            <l-card lClass="card" plaintext="true" type="primary">
+                                <view>
+                                    <view class="topicUserInfo">
+                                        <view>
+                                            <image class="topicUserInfoImg" mode="aspectFit" src="{{item.topicUserImg}}"></image>
+                                        </view>
+                                        <view class="topicUserInfoNAT">
+                                            <text class="topicUserInfoName">{{item.topicUser}}</text>
+                                            <text class="topicUserInfoTime">{{item.topicTime}}</text>
+                                        </view>
+                                    </view>
+                                    <view class="topicItem">{{item.topicName}}</view>
+                                    <view>
+                                        <view class="topicContainer">
+                                            <l-icon color="#666" name="default" size="30" style="margin-right:10rpx;"></l-icon>
+                                            <view class="topicContainerNum">{{item.topicCommentNum}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </l-card>
+                        </view>
+                    </scroll-view>
+                </view>
+                <view>
+                    <image bindtap="upPageHot" class="upPage" src="../../../images/topic/shuaxin.png"></image>
+                </view>
+            </l-tabpanel>
+        </l-tabs>
     </view>
     <view>
-      <image src="../../../images/topic/dingbu.png" class="toTopBtn" bindtap="goTop" hidden='{{!floorstatus}}'></image>
+        <view>
+            <image bindtap="addTopic" class="addTopicBtn" src="../../../images/topic/bianji.png"></image>
+        </view>
+        <view>
+            <image bindtap="goTop" class="toTopBtn" hidden="{{!floorStatus}}" src="../../../images/topic/dingbu.png"></image>
+        </view>
     </view>
-
-  </view>
-
 </view>

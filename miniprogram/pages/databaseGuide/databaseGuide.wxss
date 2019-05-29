@@ -1,10 +1,8 @@
-/* pages/databaseGuide/databaseGuide.wxss */
-
-@import "../../style/guide.wxss";
+@import "../addFunction/addFunction.wxss";
 
 .guide .counter {
-  margin-top: 50rpx;
-  display: flex;
-  flex-direction: row;
-  align-content: space-between;
+    margin-top: 50rpx;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
 }

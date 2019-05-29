@@ -1,50 +1,52 @@
-.userInfo{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .topicPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .aTopicBox {
-  width: 100%;
-  background: #f8f8f9;
+    width: 100%;
+    background: #f8f8f9;
 }
 
 .topicName {
-  font-size: 34rpx;
-  color: #1c2438;
-  margin-top: 10rpx;
-  margin-right: 10rpx;
-  margin-left: 10rpx;
+    font-size: 34rpx;
+    color: #1c2438;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
+    margin-left: 10rpx;
 }
-.topicCAT{
-  display: flex;
-  justify-content: space-between;
+
+.topicCAT {
+    display: flex;
+    justify-content: space-between;
 }
+
 .topicCommentNum {
-  font-size: 25rpx;
-  color: #80848f;
-  margin-top: 10rpx;
-  margin-left: 10rpx;
+    font-size: 25rpx;
+    color: #80848f;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
 }
 
 .topicTime {
-  font-size: 25rpx;
-  color: #80848f;
-  margin-top: 10rpx;
-  margin-right:10rpx;
+    font-size: 25rpx;
+    color: #80848f;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
 }
 
 .line {
-  background: #e9eaec;
-  width: 100%;
-  height: 3rpx;
-  margin-top: 10rpx;
+    background: #e9eaec;
+    width: 100%;
+    height: 3rpx;
+    margin-top: 10rpx;
 }

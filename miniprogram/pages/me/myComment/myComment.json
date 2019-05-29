@@ -1,7 +1,7 @@
 {
-  "usingComponents": {
-    "l-avatar": "../../dist/Lin/avatar",
-    "l-tag": "../../dist/Lin/tag"
-  },
-  "navigationBarTitleText": "我的评论"
+    "usingComponents": {
+        "l-avatar": "../../../dist/Lin/avatar/index",
+        "l-tag": "../../../dist/Lin/tag/index"
+    },
+    "navigationBarTitleText": "我的评论"
 }

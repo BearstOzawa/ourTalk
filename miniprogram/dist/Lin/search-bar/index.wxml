@@ -1,36 +1,19 @@
 <view class="search-bar l-class">
-  <slot />
-  <view wx:if="{{address}}" class="icon-container">
-    <text class="city">{{address}}</text>
-    <l-icon name="down" color="#333" size="22" />
-  </view>
-  <view class="search-input l-input-container {{'search-input-'+ shape}}" style="{{'background-color:'+bgColor}}">
-    <l-icon name="research" size="{{iconSize}}" color="{{iconColor}}" />
-  <input
-        confirm-type="{{confirmType}}"
-        class="input l-input-class {{'input'+ TextAlign}}"
-        value="{{ value }}"
-        type="{{type}}"
-        password="{{type==='password'}}"
-        placeholder="{{placeholder}}"
-        maxlength="{{maxlength}}"
-        placeholder-class="pls-class l-placeholder-class"
-        placeholder-style="{{placeholderStyle}}"
-        disabled="{{disabled}}"
-        focus="{{focus}}"
-        bindinput="handleInputChange"
-        bindfocus="handleInputFocus"
-        bindblur="handleInputBlur"
-        bindconfirm="handleInputConfirm"/>
-    <view class="close-wrap" wx:if="{{clear&&value}}" bindtap="onClearTap">
-        <view class="close">
-            <l-icon  name="close" color="#fff" size="15" />
+    <slot></slot>
+    <view class="icon-container" wx:if="{{address}}">
+        <text class="city">{{address}}</text>
+        <l-icon color="#333" name="down" size="22"></l-icon>
+    </view>
+    <view class="search-input l-input-container {{'search-input-'+shape}}" style="{{'background-color:'+bgColor}}">
+        <l-icon color="{{iconColor}}" name="research" size="{{iconSize}}"></l-icon>
+        <input bindblur="handleInputBlur" bindconfirm="handleInputConfirm" bindfocus="handleInputFocus" bindinput="handleInputChange" class="input l-input-class {{'input'+TextAlign}}" confirmType="{{confirmType}}" disabled="{{disabled}}" focus="{{focus}}" maxlength="{{maxlength}}" password="{{type==='password'}}" placeholder="{{placeholder}}" placeholderClass="pls-class l-placeholder-class" placeholderStyle="{{placeholderStyle}}" type="{{type}}" value="{{value}}"></input>
+        <view bindtap="onClearTap" class="close-wrap" wx:if="{{clear&&value}}">
+            <view class="close">
+                <l-icon color="#fff" name="close" size="15"></l-icon>
+            </view>
         </view>
     </view>
-  </view>
-  <view wx:if="{{showCancel}}" 
-        class="cancle l-cancel-class" 
-        bindtap="onCancel">
+    <view bindtap="onCancel" class="cancle l-cancel-class" wx:if="{{showCancel}}">
         {{cancelText}}
   </view>
 </view>

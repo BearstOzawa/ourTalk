@@ -1,7 +1,6 @@
-/* pages/me/List/List.wxss */
-.listBox{
-  display: flex;
-  justify-content: center;
-  width: 700rpx;
-  margin-left: 10rpx;
+.listBox {
+    display: flex;
+    justify-content: center;
+    width: 700rpx;
+    margin-left: 10rpx;
 }

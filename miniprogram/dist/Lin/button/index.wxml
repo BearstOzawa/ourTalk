@@ -1,36 +1,9 @@
-<label for="{{name}}" bindtap="handleTap">
-  <block wx:if="{{special}}">
-    <slot/>
-  </block>
-  <block wx:else>
-    <view class="l-btn {{ 'l-btn-' + size }} {{ 'l-btn-' + type }} {{ 'l-btn-' + shape }} {{plain?'l-btn-plain':''}} {{ disabled ? 'l-btn-disabled' : ''}} l-class " 
-          hover-class="btn-hover l-hover-class"
-          hover-stop-propagation="{{hoverStopPropagation}}"
-          hover-start-time="{{hoverStartTime}}"
-          hover-stay-time="{{hoverStayTime}}"
-          style="{{width?'min-width:'+width+'rpx;':''}} {{height?'height:'+height+'rpx;'+'line-height:'+height+'rpx;':''}} {{size=='long'?'border-radius:0':''}}">
-      <view wx:if="{{loading}}" class="l-btn-loading {{'margin-' + size}} {{ plain ?'l-btn-loading-' + type : '' }}"></view>
-      <l-icon class="{{'margin-' + size}}" wx:if="{{icon}}" name="{{icon}}" color="{{iconColor}}" size="{{iconSize}}" />
-      <slot/>
+<label bindtap="handleTap" for="{{name}}">
+    <slot wx:if="{{special}}"></slot>
+    <view class="l-btn {{'l-btn-'+size}} {{'l-btn-'+type}} {{'l-btn-'+shape}} {{plain?'l-btn-plain':''}} {{disabled?'l-btn-disabled':''}} l-class " hoverClass="btn-hover l-hover-class" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" style="{{width?'min-width:'+width+'rpx;':''}} {{height?'height:'+height+'rpx;'+'line-height:'+height+'rpx;':''}} {{size=='long'?'border-radius:0':''}}" wx:else>
+        <view class="l-btn-loading {{'margin-'+size}} {{plain?'l-btn-loading-'+type:''}}" wx:if="{{loading}}"></view>
+        <l-icon class="{{'margin-'+size}}" color="{{iconColor}}" name="{{icon}}" size="{{iconSize}}" wx:if="{{icon}}"></l-icon>
+        <slot></slot>
     </view>
-  </block>
 </label>
-<button style="dispaly:none" 
-        id="{{name}}" 
-        lang="{{lang}}" 
-        form-type="{{formType}}" 
-        open-type="{{openType}}" 
-        app-parameter="{{ appParameter }}" 
-        hover-stop-propagation="{{ hoverStopPropagation }}" 
-        hover-start-time="{{ hoverStartTime }}" 
-        hover-stay-time="{{ hoverStayTime }}"
-        session-from="{{ sessionFrom }}" 
-        send-message-title="{{ sendMessageTitle }}" 
-        send-message-path="{{ sendMessagePath }}" 
-        send-message-img="{{ sendMessageImg }}" 
-        show-message-card="{{ showMessageCard }}" 
-        bindcontact="openTypeEvent" 
-        bindgetuserinfo="openTypeEvent"
-        bindgetphonenumber="openTypeEvent" 
-        bindopensetting="openTypeEvent">
-</button>
+<button appParameter="{{appParameter}}" bindcontact="openTypeEvent" bindgetphonenumber="openTypeEvent" bindgetuserinfo="openTypeEvent" bindopensetting="openTypeEvent" formType="{{formType}}" hoverStartTime="{{hoverStartTime}}" hoverStayTime="{{hoverStayTime}}" hoverStopPropagation="{{hoverStopPropagation}}" id="{{name}}" lang="{{lang}}" openType="{{openType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" style="dispaly:none"></button>

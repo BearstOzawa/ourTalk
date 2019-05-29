@@ -1,29 +1,13 @@
-<!-- popup.wxml -->
-<l-pupop
-    show="{{show}}"
-    animation="show"
-    contentAlign="center"
-    locked="{{true}}" 
-    bind:lintap="onDialogTap"
->
+<l-pupop animation="show" bind:lintap="onDialogTap" contentAlign="center" locked="{{true}}" show="{{show}}">
     <view class="dialog-container l-class">
         <view class="dialog-title l-class-title" wx:if="{{showTitle}}">{{title}}</view>
         <view class="dialog-content l-class-content">
-            <slot />
+            <slot></slot>
             {{content}}
         </view>
         <view class="dialog-btn-group">
-            <view
-                class="dialog-btn-cancel l-class-cancel"
-                style="color: {{cancelColor}}"
-                catchtap="onCancelTap"
-                wx:if="{{type=='confirm'}}"
-                >{{cancelText}}</view>
-            <view
-                class="dialog-btn-confirm l-class-confirm"
-                style="color: {{confirmColor}}"
-                catchtap="onConfirmTap"
-            >{{confirmText}}</view>
+            <view catchtap="onCancelTap" class="dialog-btn-cancel l-class-cancel" style="color: {{cancelColor}}" wx:if="{{type=='confirm'}}">{{cancelText}}</view>
+            <view catchtap="onConfirmTap" class="dialog-btn-confirm l-class-confirm" style="color: {{confirmColor}}">{{confirmText}}</view>
         </view>
     </view>
 </l-pupop>

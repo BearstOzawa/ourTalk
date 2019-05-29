@@ -1,5 +1,18 @@
-import rules from '../rule/index.js';
-import { isEmptyValue } from '../util';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _index = require("../rule/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _util = require("../util");
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
 
 /**
  *  Validates the regular expression type.
@@ -10,20 +23,19 @@ import { isEmptyValue } from '../util';
  *  @param source The source object being validated.
  *  @param options The validation options.
  *  @param options.messages The validation messages.
- */
-function regexp(rule, value, callback, source, options) {
-  const errors = [];
-  const validate = rule.required || (!rule.required && source.hasOwnProperty(rule.field));
-  if (validate) {
-    if (isEmptyValue(value) && !rule.required) {
-      return callback();
+ */ function regexp(rule, value, callback, source, options) {
+    var errors = [];
+    var validate = rule.required || !rule.required && source.hasOwnProperty(rule.field);
+    if (validate) {
+        if ((0, _util.isEmptyValue)(value) && !rule.required) {
+            return callback();
+        }
+        _index2.default.required(rule, value, source, errors, options);
+        if (!(0, _util.isEmptyValue)(value)) {
+            _index2.default.type(rule, value, source, errors, options);
+        }
     }
-    rules.required(rule, value, source, errors, options);
-    if (!isEmptyValue(value)) {
-      rules.type(rule, value, source, errors, options);
-    }
-  }
-  callback(errors);
+    callback(errors);
 }
 
-export default regexp;
+exports.default = regexp;

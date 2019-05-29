@@ -1,11 +1,10 @@
 {
-  "cloud": true,
   "pages": [
+    "pages/me/index/index",
     "pages/Topic/index/index",
+    "pages/test/test",
     "pages/About/meAbout/meAbout",
     "pages/Topic/addTopic/addTopic",
-    "pages/test/test",
-    "pages/me/index/index",
     "pages/me/myComment/myComment",
     "pages/me/myTopic/myTopic",
     "pages/Topic/oneTopic/oneTopic",
@@ -43,10 +42,10 @@
       {
         "pagePath": "pages/me/index/index",
         "text": "我",
-        "iconPath": "images/tabBar/wode.png",
-        "selectedIconPath": "images/tabBar/wode3.png"
+        "iconPath": "images/tabBar/wo.png",
+        "selectedIconPath": "images/tabBar/wo2.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap82.json"
 }

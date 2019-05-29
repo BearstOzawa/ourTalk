@@ -1,7 +1,5 @@
-/* pages/chooseLib/chooseLib.wxss */
-
-@import "../../style/guide.wxss";
+@import "../addFunction/addFunction.wxss";
 
 .black {
-  color: black;
+    color: black;
 }

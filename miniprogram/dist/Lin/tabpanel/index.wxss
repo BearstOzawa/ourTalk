@@ -1,1 +1,4 @@
-.l-tabpanel-content{width:100%;height:100%}
+.l-tabpanel-content {
+    width: 100%;
+    height: 100%;
+}

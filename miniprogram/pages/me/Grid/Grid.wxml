@@ -1,12 +1,12 @@
-<view class='grid'>
-  <l-grid>
-      <l-grid-item  class='gridItem' key="one" slot="one">
-        <view class="num">3</view>
-        <view class="text">主题</view>
-      </l-grid-item>
-      <l-grid-item  class='gridItem' key="two" slot="two">
-        <view class="num">134</view>
-        <view class="text">评论</view>
-      </l-grid-item>
-  </l-grid>
+<view class="grid">
+    <l-grid>
+        <l-grid-item class="gridItem" key="one" slot="one">
+            <view class="num">3</view>
+            <view class="text">主题</view>
+        </l-grid-item>
+        <l-grid-item class="gridItem" key="two" slot="two">
+            <view class="num">134</view>
+            <view class="text">评论</view>
+        </l-grid-item>
+    </l-grid>
 </view>

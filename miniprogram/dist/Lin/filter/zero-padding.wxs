@@ -1,8 +1,8 @@
-function zeroPadding(num, length = 2) {
-    if((num + "").length >= length) {
-        return num;
-    }
-    return zeroPadding("0" + num, length)
-}
-
+function zeroPadding(num, length) {
+    length = undefined === length ? 2 : length;
+    if ((num + "").length >= length) {
+        return (num)
+    };
+    return (zeroPadding("0" + num, length))
+};
 module.exports = zeroPadding;

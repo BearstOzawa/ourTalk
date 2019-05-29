@@ -1,28 +1,27 @@
-/* pages/set/index/index.wxss */
-.setBox{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 900rpx;
-}
-.setBoxBtn{
-  margin-top: 300rpx;
+.setBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 900rpx;
 }
 
-
-.setFooterBox{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;  
-
+.setBoxBtn {
+    margin-top: 300rpx;
 }
-.setFooter{
-  position: absolute;
-  bottom: 50rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;  
+
+.setFooterBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.setFooter {
+    position: absolute;
+    bottom: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

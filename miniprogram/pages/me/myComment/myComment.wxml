@@ -1,19 +1,19 @@
 <view>
-  <view class='userInfo'>
-    <l-avatar text="{{userName}}" placement="bottom" src="{{userImg}}" />
-    <l-tag shape="circle">{{data.length}}条评论</l-tag>
-  </view>
-  <view style='margin-top:50rpx;'>
-    <view wx:for='{{data}}' wx:key="{{index}}" class='commentPage'>
-      <view class='line' />
-      <view class='aCommentBox'>
-        <view class='commentName'>
-          <text>{{item.commentName}}</text>
-        </view>
-        <view class='commentTime'>
-          <text>{{item.commentTime}}</text>
-        </view>
-      </view>
+    <view class="userInfo">
+        <l-avatar placement="bottom" src="{{userImg}}" text="{{userName}}"></l-avatar>
+        <l-tag shape="circle">{{data.length}}条评论</l-tag>
     </view>
-  </view>
+    <view style="margin-top:50rpx;">
+        <view class="commentPage" wx:for="{{data}}" wx:key="{{index}}">
+            <view class="line"></view>
+            <view class="aCommentBox">
+                <view class="commentName">
+                    <text>{{item.comment}}</text>
+                </view>
+                <view class="commentTime">
+                    <text>{{item.commentTime}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>

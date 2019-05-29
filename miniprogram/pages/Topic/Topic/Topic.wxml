@@ -1,24 +1,20 @@
-<!-- 卡片框 -->
-<l-card plaintext="true" type="primary" l-class="card">
-  <view>
-    <!-- 用户信息栏 -->
-    <view class='topicUserInfo'>
-      <view>
-        <image src='{{topicUserImg}}' class='topicUserInfoImg' mode="aspectFit"></image>
-      </view>
-      <view class='topicUserInfoNAT'>
-        <text class='topicUserInfoName'>{{topicUserName}}</text>
-        <text class='topicUserInfoTime'>{{topicTime}}</text>
-      </view>
-    </view>
-    <!-- 主题内容 -->
-    <view class="topicItem">{{topicItem}}</view>
-    <!-- 评论图标 -->
+<l-card lClass="card" plaintext="true" type="primary">
     <view>
-      <view class="topicContainer">
-        <l-icon style="margin-right:10rpx;" name="default" color="#666" size="28" />
-        <view class="topicContainerNum">{{topicCommentNum}}</view>
-      </view>
+        <view class="topicUserInfo">
+            <view>
+                <image class="topicUserInfoImg" mode="aspectFit" src="{{topicUserImg}}"></image>
+            </view>
+            <view class="topicUserInfoNAT">
+                <text class="topicUserInfoName">{{topicUserName}}</text>
+                <text class="topicUserInfoTime">{{topicTime}}</text>
+            </view>
+        </view>
+        <view class="topicItem">{{topicItem}}</view>
+        <view>
+            <view class="topicContainer">
+                <l-icon color="#666" name="default" size="28" style="margin-right:10rpx;"></l-icon>
+                <view class="topicContainerNum">{{topicCommentNum}}</view>
+            </view>
+        </view>
     </view>
-  </view>
 </l-card>

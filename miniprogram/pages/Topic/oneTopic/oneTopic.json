@@ -1,9 +1,10 @@
 {
-  "usingComponents": {
-    "l-card": "../../dist/Lin/card",
-    "l-icon": "../../dist/Lin/icon",
-    "l-input": "../../dist/Lin/input",
-    "l-button": "../../dist/Lin/button",
-    "l-tag":"../../dist/Lin/tag"
-  }
+    "usingComponents": {
+        "l-card": "../../../dist/Lin/card/index",
+        "l-icon": "../../../dist/Lin/icon/index",
+        "l-input": "../../../dist/Lin/input/index",
+        "l-button": "../../../dist/Lin/button/index",
+        "l-tag": "../../../dist/Lin/tag/index"
+    },
+    "navigationBarTitleText": "主题详情"
 }

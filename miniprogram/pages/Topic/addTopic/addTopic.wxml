@@ -1,13 +1,8 @@
-<view class='addTopic'>
-  <view class='textAreaBox'>
-    <!-- 文本域 -->
-    <l-textarea l-class="textArea" indicator="{{true}}" auto-height="{{true}}" maxlength="140" border="{{flase}}" placeholder="说说你的想法吧..." bind:linchange='textInput' />
-  </view>
-  <!-- 发布按钮 -->
-  <view class='addTopicBtn'>
-    <l-button shape="semicircle" bind:lintap="addTopic">发布</l-button>
-  </view>
-
-
-
+<view class="addTopic">
+    <view class="textAreaBox">
+        <l-textarea autoHeight="{{true}}" bind:linchange="textInput" border="{{flase}}" indicator="{{true}}" lClass="textArea" maxlength="140" placeholder="说说你的想法吧..."></l-textarea>
+    </view>
+    <view class="addTopicBtn">
+        <l-button bind:lintap="addTopic" shape="semicircle">发布</l-button>
+    </view>
 </view>

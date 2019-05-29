@@ -1,33 +1,33 @@
-var is = require('./is.wxs');
-var object = require('./object.wxs');
+var is = require('is.wxs');
+var object = require('object.wxs');
 
 function apply(fun, args) {
-  return args.map(function (item) {
-    return fun(item)
-  })
-}
+    return (args.map((function(item) {
+        return (fun(item))
+    })))
+};
 
 function classnames() {
-  var classes = [];
-  for (var i = 0; i < arguments.length; i++) {
-    var arg = arguments[i];
-    if (!arg) continue;
-    if (is.isString(arg) || is.isNumber(arg)) {
-      classes.push(arg);
-    } else if (is.isArray(arg) && arg.length) {
-      var inner = apply(classnames, arg);
-      if (inner) {
-        classes.push(inner);
-      }
-    } else if (is.isObject(arg)) {
-      object.keys(arg).forEach(function (key) {
-        if (arg[key]) {
-          classes.push(key);
+    arguments.length = arguments.length;
+    var classes = [];
+    for (var i = 0; i < arguments.length; i++) {
+        var arg = arguments[((nt_0 = (i), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))];
+        if (!arg) continue;;
+        if (is.isString(arg) || is.isNumber(arg)) {
+            classes.push(arg)
+        } else if (is.isArray(arg) && arg.length) {
+            var inner = apply(classnames, arg);
+            if (inner) {
+                classes.push(inner)
+            }
+        } else if (is.isObject(arg)) {
+            object.keys(arg).forEach((function(key) {
+                if (arg[((nt_1 = (key), null == nt_1 ? undefined : 'number' === typeof nt_1 ? nt_1 : "" + nt_1))]) {
+                    classes.push(key)
+                }
+            }))
         }
-      })
-    }
-  }
-  return classes.join(' ');
-}
-
+    };
+    return (classes.join(' '))
+};
 module.exports = classnames;

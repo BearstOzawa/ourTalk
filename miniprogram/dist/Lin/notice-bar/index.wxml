@@ -1,17 +1,15 @@
-<view wx:if="{{ show }}" class="l-class l-noticebar" style="color: {{ color }}; background-color: {{ backgroundcolor }}">
-  <l-icon wx:if="{{ frontIconName }}" size="{{frontIconSize}}" color="{{frontIconColor}}" name="{{ frontIconName }}" class="l-noticebar-icon" />
-  <swiper autoplay vertical interval="{{4*speed}}" class="l-noticebar-content-wrap" wx:if="{{type=='swip'}}">
-    <block wx:for="{{swipArr}}" wx:key="swip">
-      <swiper-item data-index="{{index}}" bindtap="onSwip">
+<view class="l-class l-noticebar" style="color: {{color}}; background-color: {{backgroundcolor}}" wx:if="{{show}}">
+    <l-icon class="l-noticebar-icon" color="{{frontIconColor}}" name="{{frontIconName}}" size="{{frontIconSize}}" wx:if="{{frontIconName}}"></l-icon>
+    <swiper autoplay vertical class="l-noticebar-content-wrap" interval="{{4*speed}}" wx:if="{{type=='swip'}}">
+        <swiper-item bindtap="onSwip" data-index="{{index}}" wx:for="{{swipArr}}" wx:key="swip">
         {{item}}
       </swiper-item>
-    </block>
-  </swiper>
-  <view class="l-noticebar-content-wrap" wx:else>
-    <view class="l-noticebar-content"  bindtap="handleTap" animation="{{ animationData }}">
-      <slot></slot>
+    </swiper>
+    <view class="l-noticebar-content-wrap" wx:else>
+        <view animation="{{animationData}}" bindtap="handleTap" class="l-noticebar-content">
+            <slot></slot>
+        </view>
     </view>
-  </view>
-  <l-icon wx:if="{{ endIconName && !close }}" size="{{endIconSize}}" color="{{endIconColor}}" class="l-noticebar-operation" name="{{ endIconName }}" bindtap="onIconTap"  />
-  <l-icon wx:if="{{close}}" class="l-noticebar-operation" name="close" size="{{endIconSize}}" color="{{endIconColor}}" bindtap="onClose"/>
+    <l-icon bindtap="onIconTap" class="l-noticebar-operation" color="{{endIconColor}}" name="{{endIconName}}" size="{{endIconSize}}" wx:if="{{endIconName&&!close}}"></l-icon>
+    <l-icon bindtap="onClose" class="l-noticebar-operation" color="{{endIconColor}}" name="close" size="{{endIconSize}}" wx:if="{{close}}"></l-icon>
 </view>

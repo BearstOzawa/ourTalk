@@ -1,22 +1,17 @@
-<!--index.wxml-->
 <view class="container">
-
-  <view class="uploader">
-    <navigator url="./serverapi/serverapi" open-type="navigate" class="uploader-text">
-      <text>服务端调用</text>
-    </navigator>
-  </view>
-
-  <view class="uploader">
-    <navigator url="./cloudid/cloudid" open-type="navigate" class="uploader-text">
-      <text>开放数据调用</text>
-    </navigator>
-  </view>
-
-  <view class="uploader">
-    <navigator url="./callback/callback" open-type="navigate" class="uploader-text">
-      <text>消息推送</text>
-    </navigator>
-  </view>
-
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./serverapi/serverapi">
+            <text>服务端调用</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./cloudid/cloudid">
+            <text>开放数据调用</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./callback/callback">
+            <text>消息推送</text>
+        </navigator>
+    </view>
 </view>

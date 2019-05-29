@@ -1,45 +1,61 @@
-/* pages/me/index/index.wxss */
+.thePage {
+    display: flex;
+    flex-direction: column;
+}
+
 .userInfoBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 300rpx;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300rpx;
+    width: 100%;
 }
-.userInfoImgAndName{
-  margin-top: 50rpx;
+
+.userInfoImgAndName {
+    margin-top: 50rpx;
 }
-.userInfoBoxBtn{
-  margin-top: 100rpx;  
+
+.userInfoBoxBtn {
+    margin-top: 100rpx;
 }
+
 .userInfoGrid {
-  display: flex;
-  justify-content: center;
-  height: 200rpx;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 200rpx;
+    width: 100%;
 }
 
-.gridItem {
-  width: 250rpx;
+.userInfoBg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
-.gridItemNum {
-  font-size: 48rpx;
-  color: #f07;
-  font-style: italic;
+.userInfoTCBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
 }
 
-.gridItemText {
-  font-size: 28rpx;
-  color: #2d8cf0;
+.userInfoIco {
+    width: 70rpx;
+}
+
+.userInfoText {
+    font-size: 28rpx;
+    color: #495060;
 }
 
 .listBox {
-  display: flex;
-  justify-content: center;
-  width: 700rpx;
-  margin-left: 10rpx;
+    width: 100%;
+    height: 100%;
+    margin-left: 10rpx;
 }
-
-

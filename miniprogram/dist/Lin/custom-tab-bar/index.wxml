@@ -1,33 +1,12 @@
-<!--miniprogram/custom-tab-bar/index.wxml-->
-<view
-  wx:if="{{show}}"
-  class="tab-bar tab-bar-{{position}}"
-  style='background: {{backgroundImg? "url("+ backgroundImg+ ")" : backgroundColor}}'>
-  <view class="tab-bar-border" style='background: {{borderStyle}}' ></view>
-  <view
-    wx:for="{{list}}"
-    wx:for-index="idx"
-    wx:key="index"
-    class="tab-bar-item {{item.style === 'circle' ? 'circle': ''}}"
-    data-path="{{item.pagePath}}"
-    data-index="{{idx}}"
-    bindtap="switchTab">
-    <view  wx:if="{{item.style === 'circle'}}" class='item-circle'></view>
-    <image
-      class='tab-bar-item-image'
-      wx:if="{{item.style != 'circle'}}"
-      style='height: {{item.iconSize}}rpx; width: {{item.iconSize}}rpx'
-      src="{{selected === idx ? item.selectedIconPath : item.iconPath}}"></image>
-      <image
-        wx:else
-        class='tab-bar-item-image'></image>
-      <image
-        class='center-circle'
-        wx:if="{{item.style === 'circle'}}"
-        src="{{selected === idx ? item.selectedIconPath : item.iconPath}}" ></image>
-    <view
-      style="font-size: {{fontSize}}rpx ;color: {{selected === idx ? selectedColor : color}}">{{item.text}}</view>
-    <view wx:if="{{item.redDot}}" class='reddot'></view>
-    <view wx:if="{{item.badge}}" class='badge'>{{item.badge}}</view>
-  </view>
+<view class="tab-bar tab-bar-{{position}}" style="background: {{backgroundImg?'url('+backgroundImg+')':backgroundColor}}" wx:if="{{show}}">
+    <view class="tab-bar-border" style="background: {{borderStyle}}"></view>
+    <view bindtap="switchTab" class="tab-bar-item {{item.style==='circle'?'circle':''}}" data-index="{{idx}}" data-path="{{item.pagePath}}" wx:for="{{list}}" wx:for-index="idx" wx:key="index">
+        <view class="item-circle" wx:if="{{item.style==='circle'}}"></view>
+        <image class="tab-bar-item-image" src="{{selected===idx?item.selectedIconPath:item.iconPath}}" style="height: {{item.iconSize}}rpx; width: {{item.iconSize}}rpx" wx:if="{{item.style!='circle'}}"></image>
+        <image class="tab-bar-item-image" wx:else></image>
+        <image class="center-circle" src="{{selected===idx?item.selectedIconPath:item.iconPath}}" wx:if="{{item.style==='circle'}}"></image>
+        <view style="font-size: {{fontSize}}rpx ;color: {{selected===idx?selectedColor:color}}">{{item.text}}</view>
+        <view class="reddot" wx:if="{{item.redDot}}"></view>
+        <view class="badge" wx:if="{{item.badge}}">{{item.badge}}</view>
+    </view>
 </view>

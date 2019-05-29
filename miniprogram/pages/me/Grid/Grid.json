@@ -1,6 +1,6 @@
 {
-  "usingComponents": {
-    "l-grid":"../../dist/Lin/grid",
-    "l-grid-item":"../../dist/Lin/grid-item"
-  }
+    "usingComponents": {
+        "l-grid": "../../../dist/Lin/grid/index",
+        "l-grid-item": "../../../dist/Lin/grid-item/index"
+    }
 }

@@ -1,37 +1,43 @@
-/* pages/Comment/Comment/Comment.wxss */
-.comment{  
-  background-color: #f8f8f9;
-  height: 350rpx;
+.comment {
+    background-color: #f8f8f9;
+    height: 350rpx;
 }
-.aComment{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
+
+.aComment {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
 }
-.commentUserInfo{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 120rpx;
+
+.commentUserInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 120rpx;
 }
-.commentUserImg{
-  width: 80rpx;
+
+.commentUserImg {
+    width: 80rpx;
 }
-.commentUserNAT{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20rpx;
+
+.commentUserNAT {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
 }
-.commentUserName{
-  font-size: 32rpx;
+
+.commentUserName {
+    font-size: 32rpx;
 }
-.userCommentTime{
-  font-size: 25rpx;
-  color: #666666;
-  margin-right: 10rpx;
+
+.userCommentTime {
+    font-size: 25rpx;
+    color: #666666;
+    margin-right: 10rpx;
 }
-.userCommentText{
-  font-size: 32rpx;
-  margin-left: 100rpx;
+
+.userCommentText {
+    font-size: 32rpx;
+    margin-left: 100rpx;
 }

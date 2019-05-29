@@ -1,1 +1,9 @@
-.movable-content{display:flex;direction:row;overflow:hidden}.container{overflow:hidden}
+.movable-content {
+    display: flex;
+    direction: row;
+    overflow: hidden;
+}
+
+.container {
+    overflow: hidden;
+}

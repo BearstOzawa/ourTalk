@@ -1,6 +1,6 @@
 {
-  "usingComponents": {
-    "l-tabs":"../../dist/Lin/tabs",
-    "l-tabpanel":"../../dist/Lin/tabpanel"
+    "usingComponents": {
+        "l-tabs": "../../../dist/Lin/tabs/index",
+        "l-tabpanel": "../../../dist/Lin/tabpanel/index"
     }
 }

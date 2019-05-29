@@ -1,16 +1,13 @@
-<view class='upUser'>
-  <form class="upUserBox" bindsubmit='upUser'>
-    <!-- ID框 -->
-    <view class='upUserInputBox'>
-      <l-input width="500" label-width="130" disabled="true" label="ID" data-value='{{id}}' name="id" value='{{user._id}}' placeholder="{{user._id}}" />
-    </view>
-    <!-- 用户框 -->
-    <view class='upUserInputBox'>
-      <l-input width="500" label-width="130" data-value='{{author}}' label="用户名" name="userName" value='{{user.userName}}' />
-    </view>
-    
-    <view class='upUserBtn'>
-      <button type="primary" form-type='submit'>修改</button>
-    </view>
-  </form>
+<view class="upUser">
+    <form bindsubmit="upUser" class="upUserBox">
+        <view class="upUserInputBox">
+            <l-input data-value="{{id}}" label="ID" labelWidth="130" name="id" placeholder="{{user.userId}}" value="{{user.userId}}" width="500"></l-input>
+        </view>
+        <view class="upUserInputBox">
+            <l-input data-value="{{author}}" label="用户名" labelWidth="130" name="userName" value="{{user.userName}}" width="500"></l-input>
+        </view>
+        <view class="upUserBtn">
+            <button formType="submit" type="primary">修改</button>
+        </view>
+    </form>
 </view>

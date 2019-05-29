@@ -1,35 +1,32 @@
 Component({
-    externalClasses: ['l-class','l-class-self',],
+    externalClasses: [ "l-class", "l-class-self" ],
     options: {
-        addGlobalClass: true,
+        addGlobalClass: true
     },
     properties: {
         name: {
             type: String,
-            value: ''
+            value: ""
         },
         color: {
             type: String,
-            value: '',
+            value: ""
         },
         size: {
             type: String,
-            value: '',
-        },
-    },
-
-    data:{
-        default:{
-            size:40,
-            color:'#45526B',
-        },
-    },
-
-    ready:function(){
-        if(!this.data.name) {
-            console.error('请传入Icon组件的name属性');
+            value: ""
         }
     },
-    methods: {
-    }
+    data: {
+        default: {
+            size: 40,
+            color: "#45526B"
+        }
+    },
+    ready: function ready() {
+        if (!this.data.name) {
+            console.error("请传入Icon组件的name属性");
+        }
+    },
+    methods: {}
 });

@@ -1,12 +1,12 @@
 {
-  "usingComponents": {
-    "l-message":"../../dist/Lin/toast",
-    "l-avatar":"../../dist/Lin/avatar",
-    "l-tag": "../../dist/Lin/tag",
-    "l-grid": "../../dist/Lin/grid",
-    "l-grid-item": "../../dist/Lin/grid-item",
-    "l-list": "../../dist/Lin/list",
-    "l-button": "../../dist/Lin/button"
-  },
-  "navigationBarTitleText": "个人中心"
+    "usingComponents": {
+        "l-message": "../../../dist/Lin/toast/index",
+        "l-avatar": "../../../dist/Lin/avatar/index",
+        "l-tag": "../../../dist/Lin/tag/index",
+        "l-grid": "../../../dist/Lin/grid/index",
+        "l-grid-item": "../../../dist/Lin/grid-item/index",
+        "l-list": "../../../dist/Lin/list/index",
+        "l-button": "../../../dist/Lin/button/index"
+    },
+    "navigationBarTitleText": "个人中心"
 }

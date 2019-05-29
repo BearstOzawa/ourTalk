@@ -1,3 +1,1 @@
-/* miniprogram/pages/openapi/callback/callback.wxss */
-
-@import "../../../style/guide.wxss";
+@import "../../addFunction/addFunction.wxss";

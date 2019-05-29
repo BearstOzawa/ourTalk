@@ -1,4 +1,4 @@
 <view style="listBox">
-  <l-list title="设置" icon="setting" />
-  <l-list title="帮助中心" icon="help" />
+    <l-list icon="setting" title="设置"></l-list>
+    <l-list icon="help" title="帮助中心"></l-list>
 </view>

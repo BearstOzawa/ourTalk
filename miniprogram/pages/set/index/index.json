@@ -1,6 +1,6 @@
 {
-  "usingComponents": {
-    "l-button":"../../dist/Lin/button"
-  },
-  "navigationBarTitleText": "设置中心"
+    "usingComponents": {
+        "l-button": "../../../dist/Lin/button/index"
+    },
+    "navigationBarTitleText": "设置中心"
 }

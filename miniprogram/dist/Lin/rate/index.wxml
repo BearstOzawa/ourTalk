@@ -1,10 +1,10 @@
 <view class="l-rate l-class">
-    <view wx:for="{{count}}" wx:key="{{item}}" class="l-rate-star" data-index="{{index}}" bindtap="handleClick">
-        <view class="icon-checked" wx:if="{{score > index}}" hover-class="none" hover-stop-propagation="false" data-rate="{{score-index}}" style="width:{{score-index<1?(score-index)*100:100}}%">
-            <image wx:if="{{activeImage &&  inActiveImage}}" class="image-item l-class-image" src="{{activeImage}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-            <l-icon wx:else name="{{name}}" l-class="l-class-icon" size="{{size}}" color="{{activeColor}}" />
+    <view bindtap="handleClick" class="l-rate-star" data-index="{{index}}" wx:for="{{count}}" wx:key="{{item}}">
+        <view class="icon-checked" data-rate="{{score-index}}" hoverClass="none" hoverStopPropagation="false" style="width:{{score-index<1?(score-index)*100:100}}%" wx:if="{{score>index}}">
+            <image class="image-item l-class-image" lazyLoad="false" mode="aspectFit|aspectFill|widthFix" src="{{activeImage}}" wx:if="{{activeImage&&inActiveImage}}"></image>
+            <l-icon color="{{activeColor}}" lClass="l-class-icon" name="{{name}}" size="{{size}}" wx:else></l-icon>
         </view>
-        <image wx:if="{{activeImage &&  inActiveImage}}" class="image-item l-class-image" src="{{inActiveImage}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
-        <l-icon wx:else name="{{name}}" l-class="l-class-icon" size="{{size}}" color="{{inActiveColor}}"></l-icon>
+        <image class="image-item l-class-image" lazyLoad="false" mode="aspectFit|aspectFill|widthFix" src="{{inActiveImage}}" wx:if="{{activeImage&&inActiveImage}}"></image>
+        <l-icon color="{{inActiveColor}}" lClass="l-class-icon" name="{{name}}" size="{{size}}" wx:else></l-icon>
     </view>
 </view>

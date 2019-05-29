@@ -3,12 +3,12 @@ module.exports = Behavior({
     properties: {
         time: {
             type: Date,
-            value: new Date().getTime() + 86400000
+            value: new Date().getTime() + 864e5
         },
         status: {
             type: Boolean,
             value: true,
-            observer: function (newVal, oldVal, changedPath) {
+            observer: function observer(newVal, oldVal, changedPath) {
                 if (newVal) {
                     this.init();
                 } else if (!newVal) {
@@ -18,73 +18,62 @@ module.exports = Behavior({
         },
         timeType: {
             type: String,
-            value: 'datetime'
+            value: "datetime"
         },
         format: {
             type: String,
-            value: '{%d}天{%h}时{%m}分{%s}秒'
+            value: "{%d}天{%h}时{%m}分{%s}秒"
         },
         isZeroPadd: {
             type: Boolean,
-            value: true,
+            value: true
         }
     },
     data: {
         initAddTime: 0,
         timer: null,
-        date: [],
+        date: []
     },
-    ready: function () {
+    ready: function ready() {
         this.getLatestTime();
     },
-
-    detached: function () {
+    detached: function detached() {
         clearInterval(this.data.timer);
     },
-
     pageLifetimes: {
-        hide() {
+        hide: function hide() {
             clearInterval(this.data.timer);
-        },
+        }
     },
-
     methods: {
         // 自动补零
-        zeroPadding(num) {
-            num = num.toString()
-            return num[1] ? num : '0' + num
+        zeroPadding: function zeroPadding(num) {
+            num = num.toString();
+            return num[1] ? num : "0" + num;
         },
-
-        init() {
+        init: function init() {
+            var _this = this;
             clearInterval(this.data.timer);
-            const timer = setTimeout(() => {
-                this.getLatestTime.call(this);
-            }, 1000);
+            var timer = setTimeout(function() {
+                _this.getLatestTime.call(_this);
+            }, 1e3);
             this.setData({
-                timer
-            })
+                timer: timer
+            });
         },
-
-        getLatestTime() {
-            let {
-                time,
-                status,
-                timeType,
-                initAddTime
-            } = this.data;
+        getLatestTime: function getLatestTime() {
+            var _data = this.data, time = _data.time, status = _data.status, timeType = _data.timeType, initAddTime = _data.initAddTime;
             // IOS不支持2019-04-23 的日期格式
-            let countDownTime = time
-            if(timeType!=='second') {
-                countDownTime = typeof time === 'string' ? countDownTime.replace(/-/g, '/') :countDownTime;
-                countDownTime = Math.ceil((new Date(countDownTime).getTime() - new Date().getTime()) / 1000);
+                        var countDownTime = time;
+            if (timeType !== "second") {
+                countDownTime = typeof time === "string" ? countDownTime.replace(/-/g, "/") : countDownTime;
+                countDownTime = Math.ceil((new Date(countDownTime).getTime() - new Date().getTime()) / 1e3);
             }
-                
-            if (countDownTime < 0 && timeType !== 'second') {
+            if (countDownTime < 0 && timeType !== "second") {
                 this._getTimeValue(0);
                 this.CountdownEnd();
-                return
+                return;
             }
-
             if (countDownTime - initAddTime > 0) {
                 this.getLatestForCountDown(countDownTime);
             } else if (countDownTime - initAddTime < 0) {
@@ -99,79 +88,71 @@ module.exports = Behavior({
                 this.init.call(this);
             }
         },
-
-        getLatestForAddTime(countDownTime) {
-            let {
-                initAddTime
-            } = this.data;
+        getLatestForAddTime: function getLatestForAddTime(countDownTime) {
+            var initAddTime = this.data.initAddTime;
             if (initAddTime !== Math.abs(countDownTime)) {
                 initAddTime++;
                 this._getTimeValue(initAddTime);
                 this.setData({
-                    initAddTime
-                })
+                    initAddTime: initAddTime
+                });
             }
         },
-
-        getLatestForCountDown(countDownTime) {
+        getLatestForCountDown: function getLatestForCountDown(countDownTime) {
             this._getTimeValue(countDownTime);
             this.setData({
-                time: this.data.timeType === 'second' ? --countDownTime : this.data.time,
+                time: this.data.timeType === "second" ? --countDownTime : this.data.time
             });
         },
-
-        _getTimeValue(countDownTime) {
-            const {
-                format
-            } = this.data;
-            const date = [];
-            const fomatArray = format.split(/(\{.*?\})/);
-            const formatType = [{
-                key: '{%d}',
-                type: 'day',
+        _getTimeValue: function _getTimeValue(countDownTime) {
+            var _this2 = this;
+            var format = this.data.format;
+            var date = [];
+            var fomatArray = format.split(/(\{.*?\})/);
+            var formatType = [ {
+                key: "{%d}",
+                type: "day",
                 count: 86400
             }, {
-                key: '{%h}',
-                type: 'hour',
+                key: "{%h}",
+                type: "hour",
                 count: 3600
             }, {
-                key: '{%m}',
-                type: 'minute',
+                key: "{%m}",
+                type: "minute",
                 count: 60
             }, {
-                key: '{%s}',
-                type: 'second',
-                count: 1,
-            }];
-            let diffSecond = countDownTime;
-            formatType.forEach(format => {
-                const index = this._findTimeName(fomatArray, format.key);
+                key: "{%s}",
+                type: "second",
+                count: 1
+            } ];
+            var diffSecond = countDownTime;
+            formatType.forEach(function(format) {
+                var index = _this2._findTimeName(fomatArray, format.key);
                 if (index === -1) return;
-                const name = fomatArray[index];
-                const formatItem = {
+                var name = fomatArray[index];
+                var formatItem = {
                     type: format.type,
-                    name,
+                    name: name,
                     value: parseInt(diffSecond / format.count)
                 };
-                if (this.data.isZeroPadd) {
-                    formatItem.value = this.zeroPadding(formatItem.value);
+                if (_this2.data.isZeroPadd) {
+                    formatItem.value = _this2.zeroPadding(formatItem.value);
                 }
                 diffSecond %= format.count;
                 date.push(formatItem);
             });
             this.setData({
-                date
+                date: date
             });
             return date;
         },
-
-        _findTimeName(fomatArray, str) {
-            const index = fomatArray.indexOf(str);
+        _findTimeName: function _findTimeName(fomatArray, str) {
+            var index = fomatArray.indexOf(str);
             if (index === -1) return -1;
-            return index + 1
+            return index + 1;
         },
-
-        CountdownEnd() {
+        CountdownEnd: function CountdownEnd() {
             this.triggerEvent("linend", {});
         }
     }
