@@ -6,5 +6,6 @@
         "l-button": "../../../dist/Lin/button/index",
         "l-tag": "../../../dist/Lin/tag/index"
     },
-    "navigationBarTitleText": "主题详情"
+    "navigationBarTitleText": "主题详情",
+        "enablePullDownRefresh": false
 }

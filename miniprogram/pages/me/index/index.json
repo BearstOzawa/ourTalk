@@ -8,5 +8,6 @@
         "l-list": "../../../dist/Lin/list/index",
         "l-button": "../../../dist/Lin/button/index"
     },
-    "navigationBarTitleText": "个人中心"
+    "navigationBarTitleText": "个人中心",
+    "enablePullDownRefresh": false
 }

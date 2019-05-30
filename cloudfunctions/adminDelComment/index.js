@@ -6,15 +6,14 @@ const _ = db.command
 
 // 云函数入口函数
 exports.main = async (event, context) => {
+
   try {
-    return await db.collection('topic')
-      .orderBy('topicCommentNum', 'desc')
-      .get({
-        success: function (res) {
-          return res
-        }
-      });
+    return await db.collection('comment')
+      .where({
+        _id: event.id
+      })
+      .remove()
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
 }

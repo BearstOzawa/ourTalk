@@ -1,7 +1,8 @@
 {
-    "usingComponents": {
-        "l-avatar": "../../../dist/Lin/avatar/index",
-        "l-tag": "../../../dist/Lin/tag/index"
-    },
-    "navigationBarTitleText": "我的主题"
+  "usingComponents": {
+    "l-avatar": "../../../dist/Lin/avatar/index",
+    "l-tag": "../../../dist/Lin/tag/index"
+  },
+  "navigationBarTitleText": "我的主题",
+  "enablePullDownRefresh": false
 }

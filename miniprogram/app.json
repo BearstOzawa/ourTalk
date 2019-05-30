@@ -1,5 +1,6 @@
 {
   "pages": [
+ 
     "pages/me/index/index",
     "pages/Topic/index/index",
     "pages/test/test",
@@ -8,9 +9,8 @@
     "pages/me/myComment/myComment",
     "pages/me/myTopic/myTopic",
     "pages/Topic/oneTopic/oneTopic",
-    "pages/me/comment/comment",
     "pages/set/index/index",
-    "pages/admin/index/index",
+      "pages/admin/index/index",
     "pages/admin/topic/index/index",
     "pages/admin/user/index/index",
     "pages/admin/user/upUser/upUser",

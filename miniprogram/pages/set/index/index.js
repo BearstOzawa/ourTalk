@@ -30,7 +30,7 @@ Page({
         } else {
             // console.log(userId)
         }
-        if (userId.length == 7) {
+        if (userId.length == 6) {
             this.setData({
                 isAdmin: false
             });

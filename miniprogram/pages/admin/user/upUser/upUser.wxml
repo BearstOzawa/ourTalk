@@ -4,7 +4,7 @@
             <l-input data-value="{{id}}" label="ID" labelWidth="130" name="id" placeholder="{{user.userId}}" value="{{user.userId}}" width="500"></l-input>
         </view>
         <view class="upUserInputBox">
-            <l-input data-value="{{author}}" label="用户名" labelWidth="130" name="userName" value="{{user.userName}}" width="500"></l-input>
+            <l-input data-value="{{author}}" disabled="true" label="用户名" labelWidth="130" name="userName" value="{{user.userName}}" width="500"></l-input>
         </view>
         <view class="upUserBtn">
             <button formType="submit" type="primary">修改</button>

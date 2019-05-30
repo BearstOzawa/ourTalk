@@ -87,7 +87,7 @@ page {
     height: 80rpx;
     width: 80rpx;
     position: fixed;
-    bottom: 220rpx;
+    bottom: 300rpx;
     right: 10rpx;
     opacity: 0.7;
 }
@@ -105,7 +105,7 @@ page {
     height: 80rpx;
     width: 80rpx;
     position: fixed;
-    bottom: 380rpx;
+    bottom: 220rpx;
     right: 10rpx;
     opacity: 0.7;
 }
