@@ -1,0 +1,32 @@
+<navigation id='Navigation' show-icon='true' show-notice='true' title="搜索"/>
+  <view class='head'>
+    <!--  搜索框  -->
+    <l-search-bar placeholder="搜索" show-cancel="{{false}}" bind:linblur="serach" bind:linchange="textInput" />
+    <l-tag shape="circle">搜索结果</l-tag>
+  </view>
+  <view>
+    <view class="tapView">
+      <view bindtap="toOneTopic" class="onrCardView" data-id="{{item.topicId}}" id="tapTest" wx:for="{{search}}" wx:key="{{index}}">
+        <l-card l-class="card" plaintext="true" type="primary">
+          <view>
+            <view class="topicUserInfo">
+              <view>
+                <image class="topicUserInfoImg" mode="aspectFit" src="{{item.topicUserImg}}"></image>
+              </view>
+              <view class="topicUserInfoNAT">
+                <text class="topicUserInfoName">{{item.topicUser}}</text>
+                <text class="topicUserInfoTime">{{item.topicTime}}</text>
+              </view>
+            </view>
+            <view class="topicItem">{{item.topicName}}</view>
+            <view>
+              <view class="topicContainer">
+                <image style='width:30rpx;height:30rpx;margin-right:5rpx;margin-left:25rpx;' src='../../images/topic/comment.png' mode='aspectFit' />
+                <view class="topicContainerNum">{{item.topicCommentNum}}</view>
+              </view>
+            </view>
+          </view>
+        </l-card>
+      </view>
+    </view>
+  </view>

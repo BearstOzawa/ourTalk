@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "l-textarea": "../../../dist/Lin/textarea/index",
-    "l-button": "../../../dist/Lin/button/index"
-  },
-  "navigationBarTitleText": "发布主题",
-  "enablePullDownRefresh": false
-}

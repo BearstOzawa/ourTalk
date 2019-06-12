@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "l-tabs": "../../../dist/Lin/tabs/index",
+    "l-tabpanel": "../../../dist/Lin/tabpanel/index",
+    "l-button": "../../../dist/Lin/button/index",
+    "l-slide-view": "../../../dist/Lin/slide-view/index",
+    "l-input": "../../../dist/Lin/input/index",
+    "l-textarea": "../../../dist/Lin/textarea/index",
+    "navigation": "../../bar/navBar/navBar"
+  },
+  "navigationBarTitleText": "后台管理"
+}

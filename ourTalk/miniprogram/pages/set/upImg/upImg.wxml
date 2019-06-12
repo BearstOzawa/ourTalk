@@ -1,0 +1,21 @@
+<navigation id='Navigation' show-icon='true' show-notice='true' title="修改信息"/>
+<view class='page'>
+  <view class='head'>
+    <view>
+      <l-avatar size="200" placement="bottom" src="{{userImg}}" bind:lintap='upImg'></l-avatar>
+    </view>
+    <view>
+      <l-tag shape="circle">点击头像修改</l-tag>
+    </view>
+  </view>
+  <view class='view'>
+    <!-- 
+    <block wx:for="{{tempImg}}" wx:key="{{index}}tmpimg">
+      <image src='{{item}}' mode='aspectFit' style='width:200rpx;'></image>
+    </block>
+
+  <!-- <l-button type="default" bindtap='upImg'>提交</l-button> -->
+    <l-tag plain="{{true}}">请上传符合互联网规定的头像哦</l-tag>
+    <l-tag plain="{{true}}">暂时只支持修改头像，用户名使用微信授权注册</l-tag>
+  </view>
+</view>

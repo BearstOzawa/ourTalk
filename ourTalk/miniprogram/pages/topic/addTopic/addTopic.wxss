@@ -1,0 +1,39 @@
+.addTopic {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.textAreaBox {
+  height: 450rpx;
+}
+
+.textArea {
+  height: 300rpx;
+}
+
+.addTopicBtn {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgUp {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.img {
+  height: 220rpx;
+  width: 220rpx;
+  margin-bottom: 10rpx;
+  border: 1rpx solid #eee;
+  border-radius: 4rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

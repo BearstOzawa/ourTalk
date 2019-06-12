@@ -1,0 +1,24 @@
+<navigation id='Navigation' show-icon='true' show-notice='true' title="消息中心" />
+<scroll-view>
+  <view wx:for="{{data.data}}" wx:key="{{data.index}}">
+    <view class='oneCard' bindtap='toNotice'>
+      <view class='oneCardBox'>
+        <view>
+          <image mode='aspectFit' src="/images/notice/notice.png" style='width:200rpx;' />
+        </view>
+        <view class='noticeText'>
+          <view class='head'>
+            <text class="title">{{item.title}}</text>
+            <text class="admin">来自：{{item.admin}}</text>
+          </view>
+          <view class="content">
+            <text>{{item.notice}}</text>
+          </view>
+          <view class="time">
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

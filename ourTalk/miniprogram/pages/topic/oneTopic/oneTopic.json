@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "l-card": "../../../dist/Lin/card/index",
+    "l-icon": "../../../dist/Lin/icon/index",
+    "l-input": "../../../dist/Lin/input/index",
+    "l-button": "../../../dist/Lin/button/index",
+    "l-tag": "../../../dist/Lin/tag/index",
+    "navigation": "../../bar/navBar/navBar"
+  },
+  "navigationBarTitleText": "主题详情",
+  "enablePullDownRefresh": false
+}

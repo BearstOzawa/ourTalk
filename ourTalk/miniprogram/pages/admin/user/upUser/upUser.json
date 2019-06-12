@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "l-button": "../../../../dist/Lin/button/index",
+    "l-input": "../../../../dist/Lin/input/index",
+    "navigation": "../../bar/navBar/navBar"
+  },
+  "navigationBarTitleText": "修改用户",
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

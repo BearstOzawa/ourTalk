@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-button": "../../../dist/Lin/button/index",
+    "navigation": "../../bar/navBar/navBar"
+  },
+  "navigationBarTitleText": "设置中心",
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

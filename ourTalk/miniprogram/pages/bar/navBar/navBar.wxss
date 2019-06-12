@@ -1,0 +1,96 @@
+.loading-gif {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.loading-wrap {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.loading-wrap image {
+  background-color: transparent;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #f8f8f9;
+  z-index: 99999;
+}
+
+.header .line {
+  border-left: 1rpx solid #e9eaec;
+  height: 36rpx;
+}
+
+.header .back, .header .home, .header .serach {
+  height: 34rpx;
+  width: 34rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 138rpx;
+  height: 58rpx;
+  border: 1rpx solid #dddee1;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding: 0 10rpx;
+  background: #fff;
+}
+
+.header .title-serach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58rpx;
+  height: 58rpx;
+  border: 1rpx solid #dddee1;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding: 0 10rpx;
+  background: #fff;
+}
+.title-notice-Box{
+  position: absolute;
+  right: 180rpx;
+}
+.header .title-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58rpx;
+  height: 58rpx;
+  border: 1rpx solid #dddee1;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+  background: #fff;
+}
+
+.header .title-bar  image {
+  width: 30rpx;
+  height: 30rpx;
+  background: transparent;
+  vertical-align: top;
+}
+
+.header .header-title {
+  position: absolute;
+  left: 50%;
+  font-weight: 800;
+  font-size: 28rpx;
+  transform: translateX(-50%);
+}

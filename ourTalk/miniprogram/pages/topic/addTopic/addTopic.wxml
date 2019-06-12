@@ -1,0 +1,17 @@
+<navigation id='Navigation' show-icon='true' show-notice='true' title="发布主题" />
+<view class="addTopic">
+  <view class="textAreaBox">
+    <l-textarea autoHeight="{{true}}" bind:linchange="textInput" border="{{flase}}" indicator="{{true}}" lClass="textArea" maxlength="140" placeholder="说说你的想法吧..."></l-textarea>
+
+
+    <!-- 传图 -->
+    <view class='imgUp'>
+      <image wx:if="{{!imgUrl}}" bindtap='imgUp' mode='aspectFit' class='img' src='/images/addTopic/add.png' />
+      <image wx:else mode='aspectFit' class='img' src='{{imgUrl}}' />
+    </view>
+    <view class="addTopicBtn">
+      <l-button bind:lintap="addTopic" shape="semicircle">发布</l-button>
+    </view>
+  </view>
+
+</view>

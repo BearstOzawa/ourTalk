@@ -1,0 +1,58 @@
+/* pages/me/myFavorite/myFavorite.wxss */
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220rpx;
+}
+
+.commentPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.aCommentBox {
+  width: 100%;
+  background: #f8f8f9;
+}
+
+.commentName {
+  font-size: 34rpx;
+  color: #1c2438;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.commentTime {
+  font-size: 25rpx;
+  color: #80848f;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10rpx;
+}
+
+.line {
+  background: #e9eaec;
+  width: 100%;
+  height: 3rpx;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #ed3f14;
+  color: #f8f8f9;
+  font-size: 30rpx;
+}
