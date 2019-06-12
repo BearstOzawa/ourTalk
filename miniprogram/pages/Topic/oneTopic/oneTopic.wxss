@@ -1,0 +1,146 @@
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.scrollView {
+    height: 94%;
+    margin-bottom: 8%;
+    overflow: scroll;
+}
+
+.Topic {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rpx;
+}
+
+.topicUserInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 140rpx;
+}
+
+.topicUserImg {
+    width: 90rpx;
+}
+
+.topictUserNAT {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.topicUserName {
+    font-size: 45rpx;
+}
+
+.topicTime {
+    font-size: 25rpx;
+    color: #666666;
+}
+
+.topicBetweenCommentBox {
+    background-color: #f8f8f9;
+}
+
+.addCommentBg {
+    background-color: #EFEFEF;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    bottom: 0;
+}
+
+.addComment {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.addCommentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+
+.addCommentBtn {
+    width: 80rpx;
+    height: 100%;
+    margin-right: -40rpx;
+}
+
+.addCommentInput {
+    width: 95%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+}
+
+.comment {
+    background-color: #f8f8f9;
+}
+
+.aComment {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    height: 100%;
+}
+
+.commentUserInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80rpx;
+}
+
+.commentUserImg {
+    width: 60rpx;
+}
+
+.commentUserNAT {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.commentUserName {
+    font-size: 32rpx;
+}
+
+.userCommentTime {
+    font-size: 23rpx;
+    color: #666666;
+}
+
+.divLine {
+    background: #e9eaec;
+    width: 100%;
+    height: 3rpx;
+    margin-top: 20rpx;
+}
+
+.toTopBtn {
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 140rpx;
+    right: 10rpx;
+    opacity: 0.7;
+}
+
+.noComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+    color: #ccc;
+}

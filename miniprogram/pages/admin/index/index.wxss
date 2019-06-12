@@ -1,0 +1,139 @@
+.topicAdmin {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.topicAdminHead {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 60rpx;
+    align-items: center;
+}
+
+.topicAdminHeadth {
+    width: 100%;
+    justify-content: center;
+    background: #2d8cf0;
+    color: #fff;
+    display: flex;
+    height: 60rpx;
+    align-items: center;
+    font-size: 35rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+}
+
+.topicAdminBodyOne {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130rpx;
+    align-items: center;
+}
+
+.topicAdminBodyTwo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130rpx;
+    align-items: center;
+    background: #E6F3F9;
+}
+
+.topicAdminBodyID {
+    width: 15%;
+    justify-content: center;
+    text-align: center;
+    font-size: 18rpx;
+}
+
+.topicAdminBodyName {
+    width: 15%;
+    justify-content: center;
+    text-align: center;
+    font-size: 20rpx;
+}
+
+.topicAdminBodyNameText {
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.topicAdminBodyTime {
+    width: 15%;
+    justify-content: center;
+    text-align: center;
+    font-size: 18rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.userAdmin {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.userAdminHead {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 60rpx;
+    align-items: center;
+}
+
+.userAdminHeadth {
+    width: 100%;
+    justify-content: center;
+    background: #2d8cf0;
+    color: #fff;
+    display: flex;
+    height: 60rpx;
+    align-items: center;
+    font-size: 35rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+}
+
+.userAdminBodyOne {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130rpx;
+    align-items: center;
+}
+
+.userAdminBodyTwo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130rpx;
+    align-items: center;
+    background: #E6F3F9;
+}
+
+.UserAdminBodyID {
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    font-size: 20rpx;
+}
+
+.UserAdminBodyName {
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    font-size: 30rpx;
+}

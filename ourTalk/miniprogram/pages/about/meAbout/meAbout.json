@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "navigation": "../../bar/navBar/navBar"
-    },
-  "navigationBarTitleText": "小程序MD"
-}

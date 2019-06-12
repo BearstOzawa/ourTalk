@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "l-message": "../../../dist/Lin/toast/index",
+        "l-avatar": "../../../dist/Lin/avatar/index",
+        "l-tag": "../../../dist/Lin/tag/index",
+        "l-grid": "../../../dist/Lin/grid/index",
+        "l-grid-item": "../../../dist/Lin/grid-item/index",
+        "l-list": "../../../dist/Lin/list/index",
+        "l-button": "../../../dist/Lin/button/index"
+    },
+    "navigationBarTitleText": "个人中心",
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,20 @@
+<view>
+    <view>
+        <view class="setBox">
+            <view class="setBoxBtn">
+                <button bindtap="clearStorage" type="primary">退出登录</button>
+            </view>
+            <view hidden="{{isAdmin}}">
+                <view style="margin-top:50rpx;">
+                    <button bindtap="intoAdmin" type="primary">管理中心</button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="setFooterBox">
+        <view class="setFooter">
+            <text style="font-size:32rpx;">版本号</text>
+            <text style="color:#2b85e4;font-size:28rpx;">0.0.1</text>
+        </view>
+    </view>
+</view>

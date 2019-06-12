@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+
+  },
+  "navigationBarTitleText": "小程序MD",
+  "enablePullDownRefresh": false
+}

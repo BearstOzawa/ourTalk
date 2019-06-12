@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-tabs": "../../../dist/Lin/tabs/index",
+    "l-tabpanel": "../../../dist/Lin/tabpanel/index",
+    "l-card": "../../../dist/Lin/card/index",
+    "l-icon": "../../../dist/Lin/icon/index"
+  },
+  "enablePullDownRefresh": false
+}

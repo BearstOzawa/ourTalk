@@ -1,0 +1,111 @@
+page {
+    height: 100%;
+}
+
+.thePage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.onePage {
+    height: 100%;
+}
+
+.tapView {
+    height: 100%;
+    width: 100%;
+}
+
+.scrollView {
+    height: 100%;
+    overflow: scroll;
+}
+
+.onrCardView {
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.card {
+    height: 100%;
+}
+
+.topicUserInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60rpx;
+}
+
+.topicUserInfoImg {
+    width: 60rpx;
+}
+
+.topicUserInfoNAT {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.topicUserInfoName {
+    font-size: 28rpx;
+}
+
+.topicUserInfoTime {
+    font-size: 25rpx;
+    color: #666;
+}
+
+.topicItem {
+    font-size: 30rpx;
+    width: 100%;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.topicContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
+}
+
+.topicContainerNum {
+    font-size: 30rpx;
+}
+
+.addTopicBtn {
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 300rpx;
+    right: 10rpx;
+    opacity: 0.7;
+}
+
+.toTopBtn {
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 140rpx;
+    right: 10rpx;
+    opacity: 0.7;
+}
+
+.upPage {
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 220rpx;
+    right: 10rpx;
+    opacity: 0.7;
+}

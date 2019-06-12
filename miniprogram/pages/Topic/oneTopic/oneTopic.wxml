@@ -1,0 +1,55 @@
+<scroll-view scrollY bindscroll="scrolltoupper" class="scrollView" scrollTop="{{topNum}}">
+    <view class="Topic">
+        <view>
+            <view>
+                <l-card plaintext="true" type="primary">
+                    <view class="topicUserInfo">
+                        <image class="topicUserImg" mode="aspectFit" src="{{data.topicUserImg}}"></image>
+                        <view class="topictUserNAT">
+                            <text class="topicUserName">{{data.topicUser}}</text>
+                            <text class="topicTime">{{data.topicTime}}</text>
+                        </view>
+                    </view>
+                    <view class="topicItem">{{data.topicName}}</view>
+                </l-card>
+            </view>
+        </view>
+    </view>
+    <view class="topicBetweenCommentBox">
+        <view style="margin-left:10rpx;height:60rpx;margin-top:10rpx;">
+            <l-tag size="mini">全部评论 ( {{data.topicCommentNum}} )</l-tag>
+        </view>
+    </view>
+    <view wx:if="{{data.comment.length>0}}">
+        <view wx:for="{{data.comment}}" wx:key="{{index}}">
+            <view class="comment">
+                <view class="aComment">
+                    <view class="commentUserInfo">
+                        <image class="commentUserImg" mode="aspectFit" src="{{item.commentUserImg}}"></image>
+                        <view class="commentUserNAT">
+                            <text class="commentUserName">{{item.commentUserName}}</text>
+                            <text class="userCommentTime">{{item.commentTime}}</text>
+                        </view>
+                    </view>
+                    <view style="overflow-wrap: break-word;margin-left: 80rpx;">
+                        <text selectable="true" style="font-size: 28rpx;">{{item.comment}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="divLine"></view>
+        </view>
+    </view>
+    <view class="noComment" wx:else>
+    暂无评论...
+  </view>
+</scroll-view>
+<view>
+    <image bindtap="goTop" class="toTopBtn" hidden="{{!floorstatus}}" src="../../../images/topic/dingbu.png"></image>
+</view>
+<view class="addCommentBg">
+    <view class="addComment">
+        <view class="addCommentBox">
+            <input bindconfirm="confirm" bindinput="addComment" class="addCommentInput" confirmType="send" maxlength="64" placeholder="友善发言的人运气不会太差" placeholderStyle="color:#ccc" value="{{commentTxt}}"></input>
+        </view>
+    </view>
+</view>

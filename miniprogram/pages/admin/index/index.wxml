@@ -1,0 +1,105 @@
+<l-tabs>
+    <l-tabpanel key="1" slot="1" tab="主题管理">
+        <view>
+            <view class="topicAdmin" wx:if="{{topic}}">
+                <view class="topicAdminHead">
+                    <view class="topicAdminHeadth">主题</view>
+                    <view class="topicAdminHeadth">用户</view>
+                    <view class="topicAdminHeadth">时间</view>
+                    <view class="topicAdminHeadth">操作</view>
+                </view>
+                <block wx:for="{{topic}}" wx:key="{{index}}">
+                    <view class="topicAdminBodyOne" wx:if="{{index%2==0}}">
+                        <view class="topicAdminBodyName">
+                            <text class="topicAdminBodyNameText">{{item.topicName}}</text>
+                        </view>
+                        <view class="topicAdminBodyName">{{item.topicUser}}</view>
+                        <view class="topicAdminBodyTime">{{item.topicTime}}</view>
+                        <view class="td">
+                            <l-button bindtap="onTopicDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                        </view>
+                    </view>
+                    <view class="topicAdminBodyTwo" wx:else>
+                        <view class="topicAdminBodyName">
+                            <text class="topicAdminBodyNameText">{{item.topicName}}</text>
+                        </view>
+                        <view class="topicAdminBodyName">{{item.topicUser}}</view>
+                        <view class="topicAdminBodyTime">{{item.topicTime}}</view>
+                        <view class="td">
+                            <l-button bindtap="onTopicDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="none" wx:else>
+                <text>暂时没有主题！</text>
+            </view>
+        </view>
+    </l-tabpanel>
+    <l-tabpanel key="2" slot="2" tab="用户管理">
+        <view>
+            <view class="userAdmin" wx:if="{{user}}">
+                <view class="userAdminHead">
+                    <view class="userAdminHeadth">ID</view>
+                    <view class="userAdminHeadth">昵称</view>
+                    <view class="userAdminHeadth">操作</view>
+                </view>
+                <block wx:for="{{user}}" wx:key="{{index}}">
+                    <view class="userAdminBodyOne" wx:if="{{index%2==0}}">
+                        <view class="UserAdminBodyID">{{item.userId}}</view>
+                        <view class="UserAdminBodyName">{{item.userName}}</view>
+                        <view class="td">
+                            <l-button bindtap="onUserDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                            <l-button bindtap="onUserUpdate" data-id="{{item._id}}" height="50" type="success" width="90">修改</l-button>
+                        </view>
+                    </view>
+                    <view class="userAdminBodyTwo" wx:else>
+                        <view class="UserAdminBodyID">{{item.userId}}</view>
+                        <view class="UserAdminBodyName">{{item.userName}}</view>
+                        <view class="td">
+                            <l-button bindtap="onUserDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                            <l-button bindtap="onUserUpdate" data-id="{{item._id}}" height="50" type="success" width="90">修改</l-button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="none" wx:else>
+                <text>暂时没有用户！</text>
+            </view>
+        </view>
+    </l-tabpanel>
+     <l-tabpanel key="3" slot="3" tab="评论管理">
+        <view>
+            <view class="topicAdmin" wx:if="{{comment}}">
+                <view class="topicAdminHead">
+                    <view class="topicAdminHeadth">评论</view>
+                    <view class="topicAdminHeadth">时间</view>
+                    <view class="topicAdminHeadth">操作</view>
+                </view>
+                <block wx:for="{{comment}}" wx:key="{{index}}">
+                    <view class="topicAdminBodyOne" wx:if="{{index%2==0}}">
+                        <view class="topicAdminBodyName">
+                            <text class="topicAdminBodyNameText">{{item.comment}}</text>
+                        </view>
+                        <view class="topicAdminBodyTime">{{item.commentTime}}</view>
+                        <view class="td">
+                            <l-button bindtap="onTopicDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                        </view>
+                    </view>
+                    <view class="topicAdminBodyTwo" wx:else>
+                        <view class="topicAdminBodyName">
+                            <text class="topicAdminBodyNameText">{{item.comment}}</text>
+                        </view>
+                        <view class="topicAdminBodyTime">{{item.commentTime}}</view>
+                        <view class="td">
+                            <l-button bindtap="onCommentDel" data-id="{{item._id}}" height="50" type="error" width="90">删除</l-button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="none" wx:else>
+                <text>暂时没有评论！</text>
+            </view>
+        </view>
+    </l-tabpanel> 
+</l-tabs>

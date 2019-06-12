@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="userinfo">
+        <button bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" openType="getUserInfo" style="background-image: url({{avatarUrl}})"></button>
+        <view>
+            <button bindtap="onGetOpenid" class="userinfo-nickname">点击获取 openid</button>
+        </view>
+    </view>
+    <view class="uploader">
+        <view bindtap="doUpload" class="uploader-text">
+            <text>上传图片</text>
+        </view>
+        <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image bindtap="previewImg" class="uploader-image" mode="aspectFit" src="{{imgUrl}}"></image>
+        </view>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="../databaseGuide/databaseGuide">
+            <text>前端操作数据库</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="../addFunction/addFunction">
+            <text>快速新建云函数</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="../openapi/openapi">
+            <text>云调用</text>
+        </navigator>
+    </view>
+</view>

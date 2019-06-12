@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./serverapi/serverapi">
+            <text>服务端调用</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./cloudid/cloudid">
+            <text>开放数据调用</text>
+        </navigator>
+    </view>
+    <view class="uploader">
+        <navigator class="uploader-text" openType="navigate" url="./callback/callback">
+            <text>消息推送</text>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "l-tabs": "../../../dist/Lin/tabs/index",
+        "l-tabpanel": "../../../dist/Lin/tabpanel/index",
+        "l-button": "../../../dist/Lin/button/index"
+    },
+    "navigationBarTitleText": "后台管理",
+        "enablePullDownRefresh": false
+}

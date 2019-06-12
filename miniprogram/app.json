@@ -1,0 +1,51 @@
+{
+  "pages": [
+ 
+    "pages/me/index/index",
+    "pages/Topic/index/index",
+    "pages/test/test",
+    "pages/About/meAbout/meAbout",
+    "pages/Topic/addTopic/addTopic",
+    "pages/me/myComment/myComment",
+    "pages/me/myTopic/myTopic",
+    "pages/Topic/oneTopic/oneTopic",
+    "pages/set/index/index",
+      "pages/admin/index/index",
+    "pages/admin/topic/index/index",
+    "pages/admin/user/index/index",
+    "pages/admin/user/upUser/upUser",
+    "pages/Topic/Topic/Topic",
+    "pages/Comment/Comment/Comment",
+    "pages/me/List/List",
+    "pages/me/Grid/Grid",
+    "pages/Bar/Tabs/Tabs",
+    "pages/Comment/addComment/addComment",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#2d8cf0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "ourTalk",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#1c2438",
+    "selectedColor": "#2d8cf0",
+    "list": [
+      {
+        "pagePath": "pages/Topic/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar/shuju.png",
+        "selectedIconPath": "images/tabBar/shuju3.png"
+      },
+      {
+        "pagePath": "pages/me/index/index",
+        "text": "我",
+        "iconPath": "images/tabBar/wo.png",
+        "selectedIconPath": "images/tabBar/wo2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap82.json"
+}

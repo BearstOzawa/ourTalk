@@ -1,0 +1,8 @@
+<view class="addTopic">
+    <view class="textAreaBox">
+        <l-textarea autoHeight="{{true}}" bind:linchange="textInput" border="{{flase}}" indicator="{{true}}" lClass="textArea" maxlength="140" placeholder="说说你的想法吧..."></l-textarea>
+    </view>
+    <view class="addTopicBtn">
+        <l-button bind:lintap="addTopic" shape="semicircle">发布</l-button>
+    </view>
+</view>

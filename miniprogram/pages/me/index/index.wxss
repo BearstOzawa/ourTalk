@@ -1,0 +1,61 @@
+.thePage {
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfoBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300rpx;
+    width: 100%;
+}
+
+.userInfoImgAndName {
+    margin-top: 50rpx;
+}
+
+.userInfoBoxBtn {
+    margin-top: 100rpx;
+}
+
+.userInfoGrid {
+    display: flex;
+    justify-content: center;
+    height: 200rpx;
+    width: 100%;
+}
+
+.userInfoBg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.userInfoTCBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+}
+
+.userInfoIco {
+    width: 70rpx;
+}
+
+.userInfoText {
+    font-size: 28rpx;
+    color: #495060;
+}
+
+.listBox {
+    width: 100%;
+    height: 100%;
+    margin-left: 10rpx;
+}

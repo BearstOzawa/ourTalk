@@ -1,0 +1,5 @@
+@import "../addFunction/addFunction.wxss";
+
+.black {
+    color: black;
+}

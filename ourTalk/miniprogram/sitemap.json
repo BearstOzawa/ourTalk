@@ -1,7 +1,0 @@
-{
-  "desc": "README.MD",
-  "rules": [{
-  "action": "allow",
-  "page": "*"
-  }]
-}

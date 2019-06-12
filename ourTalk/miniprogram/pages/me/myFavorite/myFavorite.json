@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "l-avatar": "../../../dist/Lin/avatar/index",
-    "l-tag": "../../../dist/Lin/tag/index",
-    "l-slide-view": "../../../dist/Lin/slide-view/index",
-    "navigation": "../../bar/navBar/navBar"
-  },
-  "navigationBarTitleText": "我的收藏"
-}

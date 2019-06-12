@@ -1,0 +1,22 @@
+<view>
+    <view class="aboutPage">
+        <image mode="aspectFit" src="../../../images/about/icon.png"></image>
+        <view class="aboutText">
+            <view>
+                <text style="font-size:60rpx;color:#2d8cf0">ourTalk</text>
+            </view>
+            <view>
+                <text style="font-size:30rpx;color:#1c2438">**大微交流论坛</text>
+            </view>
+            <view>
+                <text style="font-size:20rpx;color:#80848f">不想说而已</text>
+            </view>
+            <view style="margin-top: 20rpx;">
+                <text style="font-size:20rpx;color:#80848f">不为别的，仅用于学习测试</text>
+            </view>
+            <view style="width:70%;">
+                <text style="font-size:25rpx;color:#495060">ourTalk，出于网络交流的便利，开发的微交流论坛。基于微信小程序开发，使用微信官方提供的云开发服务为小程序后台支持。使用微信官方提供的基于MongoDB云数据库；由于微信开发技术的限制，数据库读写权限有限，部分数据的入库读库使用微信官方提供的云函数；并未使用云存储服务，小程序的静态资源大部分都写死，用户头像等使用微信官方的图床，和微信App共享资源。其他的没了...还有，I am Ozawa</text>
+            </view>
+        </view>
+    </view>
+</view>
