@@ -76,6 +76,6 @@
 <p><img src="https://i.loli.net/2019/06/18/5d08b92b24d9141006.png" /></p>
 
 本项目的CDN加速和安全防护由腾讯EdgeOne赞助。
-![image](https://github.com/user-attachments/assets/d85ccbfd-0404-4b60-be99-374c31a90bf8)
+[![image](https://github.com/user-attachments/assets/d85ccbfd-0404-4b60-be99-374c31a90bf8)](https://edgeone.ai/?from=github)
 
 
